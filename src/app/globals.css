@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-slate-700 bg-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold text-slate-900 leading-tight;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .prose-custom {
+    @apply prose prose-slate max-w-none
+      prose-headings:text-slate-900 prose-headings:font-bold
+      prose-p:text-slate-600 prose-p:leading-relaxed
+      prose-a:text-primary hover:prose-a:text-primary-light
+      prose-strong:text-slate-900
+      prose-img:rounded-lg prose-img:shadow-md
+      prose-table:border-collapse prose-th:bg-slate-50 prose-th:px-4 prose-th:py-3
+      prose-td:px-4 prose-td:py-3;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #1e3a5f 0%, #152a45 100%);
+  }
+
+  .bg-gradient-accent {
+    background: linear-gradient(135deg, #c8963e 0%, #a67c2e 100%);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
