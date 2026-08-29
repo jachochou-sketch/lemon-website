@@ -112,7 +112,7 @@ export default function ContactForm() {
         </h3>
         <p className="text-slate-600 mb-6 max-w-md mx-auto">
           We have received your message and our team will contact you within
-          24 hours. For urgent inquiries, please call us at +86 21 5555 1234.
+          24 hours. For urgent inquiries, please call us at +86 132 5049 6024.
         </p>
         <Button
           variant="outline"

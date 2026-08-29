@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eastmfg.com/sitemap.xml
+Sitemap: https://lemonenviro.com/sitemap.xml

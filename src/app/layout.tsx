@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lemonenvirotec.com'),
+  metadataBase: new URL('https://lemonenviro.com'),
   title: {
     default: 'Lemon Environmental Technology — Water Purifier ODM & OEM Manufacturer',
     template: '%s | Lemon Environmental Technology',

@@ -3,7 +3,7 @@ import { products } from '@/data/products';
 import { blogPosts } from '@/data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://lemonenvirotec.com';
+  const baseUrl = 'https://lemonenviro.com';
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },

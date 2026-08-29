@@ -31,7 +31,7 @@ export default function CTASection() {
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button
-              href="mailto:info@eastmfg.com"
+              href="mailto:jachochou@gmail.com"
               variant="outline"
               size="lg"
               className="!border-white/30 !text-white hover:!bg-white hover:!text-primary"
