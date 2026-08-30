@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
-import { Mail, Phone, MapPin, Clock, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, Loader2, CheckCircle2 } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Card from '@/components/ui/Card';
 import ContactForm from '@/components/contact/ContactForm';
@@ -9,7 +9,7 @@ import { companyInfo } from '@/data/company';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Get in touch with East Manufacturing for a quote, technical consultation, or partnership inquiry. We respond within 24 hours.',
+    'Contact Lemon Environmental Technology for water purifier ODM/OEM quotations, product development, and partnership inquiries.',
 };
 
 const contactMethods = [
@@ -18,7 +18,7 @@ const contactMethods = [
     label: 'Email',
     value: companyInfo.contact.email,
     href: `mailto:${companyInfo.contact.email}`,
-    description: 'Send us your drawings and specifications',
+    description: 'Send us your product requirements',
   },
   {
     icon: Phone,
@@ -55,7 +55,7 @@ export default function ContactPage() {
             </h1>
             <p className="text-lg text-white/70 leading-relaxed">
               Ready to discuss your project? Fill out the form below and our team
-              will get back to you with a detailed quote within 24 hours.
+              will review your requirements and reply within one business day.
             </p>
           </div>
         </Container>
@@ -120,19 +120,23 @@ export default function ContactPage() {
                 </Card>
               )})}
 
-              {/* Map Placeholder */}
-              <Card padding="none" className="overflow-hidden">
-                <div className="aspect-[4/3] bg-slate-200 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-10 h-10 text-slate-400 mx-auto mb-2" />
-                    <p className="text-sm text-slate-500 font-medium">
-                      Map Location
-                    </p>
-                    <p className="text-xs text-slate-400">
-                      Zhongshan, Guangdong, China
-                    </p>
-                  </div>
-                </div>
+              <Card padding="md">
+                <h3 className="font-semibold text-slate-900 mb-3">
+                  Helpful project details
+                </h3>
+                <ul className="space-y-2 text-sm text-slate-600">
+                  {[
+                    'Target market and required certifications',
+                    'Preferred filtration technology and product format',
+                    'Estimated order quantity and launch timeline',
+                    'Branding, packaging, and customization needs',
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </Card>
             </div>
           </div>

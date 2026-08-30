@@ -21,9 +21,9 @@ export default function CTASection() {
             Ready to Start Your Next Project?
           </h2>
           <p className="text-lg text-white/70 leading-relaxed mb-10">
-            Send us your drawings or specifications and our engineering team will
-            provide a detailed quote within 24 hours. From prototype to production,
-            we are ready to help.
+            Tell us your target market, filtration requirements, expected order
+            quantity, and launch timeline. We will review the project and reply
+            within one business day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/contact" variant="primary" size="lg">

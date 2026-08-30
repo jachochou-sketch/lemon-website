@@ -24,7 +24,7 @@ export default function ProductGrid({
         </div>
         <h3 className="text-xl font-bold text-slate-900 mb-2">{emptyMessage}</h3>
         <p className="text-slate-500 mb-6">
-          Contact us for custom orders — we manufacture to your specifications.
+          Tell us your filtration, branding, and target-market requirements for a custom solution.
         </p>
         <a
           href={emptyCTAHref}

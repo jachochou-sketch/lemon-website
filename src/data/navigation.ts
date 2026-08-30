@@ -18,7 +18,7 @@ export const footerLinks = {
   ],
   company: [
     { label: 'About Us', href: '/about' },
-    { label: 'Our Team', href: '/about#team' },
+    { label: 'Company Milestones', href: '/about#milestones' },
     { label: 'Certifications', href: '/about#certifications' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: '/contact' },

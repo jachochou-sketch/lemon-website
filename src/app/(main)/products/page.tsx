@@ -6,7 +6,7 @@ import ProductListing from '@/components/products/ProductListing';
 export const metadata: Metadata = {
   title: 'Products',
   description:
-    'Explore our full range of precision-manufactured industrial components: CNC machined parts, aluminum extrusions, stainless steel castings, injection molding, and more.',
+    'Explore Lemon water purification products, including RO systems, filter cartridges, membrane elements, softeners, and custom ODM/OEM solutions.',
 };
 
 export default function ProductsPage() {

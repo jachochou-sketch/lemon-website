@@ -6,7 +6,7 @@ import BlogListing from '@/components/blog/BlogListing';
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Industry insights, manufacturing guides, case studies, and sourcing tips from East Manufacturing\'s engineering and quality teams.',
+    'Water purification insights, filtration guides, certification considerations, and practical ODM/OEM resources from Lemon Environmental Technology.',
 };
 
 export default function BlogPage() {
@@ -20,8 +20,8 @@ export default function BlogPage() {
               Blog &amp; Resources
             </h1>
             <p className="text-lg text-white/70 leading-relaxed">
-              Expert insights on manufacturing, quality control, material selection,
-              and sourcing strategies — written by our engineers and industry specialists.
+              Practical insights on water purification, filtration technology,
+              product development, quality control, and international market preparation.
             </p>
           </div>
         </Container>

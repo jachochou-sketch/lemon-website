@@ -34,7 +34,7 @@ export function generateMetadata({ params }: ProductDetailPageProps): Metadata {
     title: product.name,
     description: product.summary,
     openGraph: {
-      title: `${product.name} | East Manufacturing`,
+      title: `${product.name} | Lemon Environmental Technology`,
       description: product.summary,
     },
   };

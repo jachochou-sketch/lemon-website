@@ -1,8 +1,8 @@
 {
-  "name": "east-manufacturing",
+  "name": "lemon-website",
   "version": "1.0.0",
   "private": true,
-  "description": "Professional B2B manufacturing and foreign trade company website",
+  "description": "Lemon Environmental Technology ODM and OEM water purification website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

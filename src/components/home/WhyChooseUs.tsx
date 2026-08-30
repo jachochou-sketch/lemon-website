@@ -1,9 +1,9 @@
 import {
-  Cog,
+  Droplets,
   ShieldCheck,
   Truck,
   MessageSquareText,
-  Microscope,
+  Wrench,
   BadgeCheck,
 } from 'lucide-react';
 import Container from '@/components/ui/Container';
@@ -12,40 +12,40 @@ import Card from '@/components/ui/Card';
 
 const reasons = [
   {
-    icon: Cog,
-    title: 'Advanced Manufacturing',
+    icon: Droplets,
+    title: 'Water-Treatment Focus',
     description:
-      '5-axis CNC machines, automated production lines, and robotic welding cells ensure precision and repeatability at scale.',
+      'Dedicated assembly, filter production, and water-quality testing capabilities support residential and commercial purifier programs.',
   },
   {
     icon: ShieldCheck,
-    title: 'Rigorous Quality Control',
+    title: 'Quality at Every Stage',
     description:
-      'ISO 9001:2015 certified with CMM inspection, material testing lab, and 100% dimensional inspection on critical parts.',
+      'Incoming materials, filtration performance, pressure, leakage, and finished-product checks are built into the production process.',
   },
   {
-    icon: Microscope,
-    title: 'Engineering Expertise',
+    icon: Wrench,
+    title: 'Flexible ODM & OEM',
     description:
-      'Our 30+ engineers provide DFM feedback, material recommendations, and process optimization to reduce your costs.',
+      'Choose an existing platform or develop a tailored solution covering filtration, housing, controls, branding, and packaging.',
   },
   {
     icon: Truck,
-    title: 'Reliable Global Logistics',
+    title: 'Export Project Support',
     description:
-      'FOB and DDP shipping options. Strategic partnerships with major freight carriers ensure on-time delivery worldwide.',
+      'We coordinate production documentation, packaging, and international shipping requirements for your target market.',
   },
   {
     icon: MessageSquareText,
-    title: 'English-Speaking Support',
+    title: 'Responsive Communication',
     description:
-      'Dedicated account managers who communicate clearly in English, German, and Mandarin — no misunderstandings, no delays.',
+      'A dedicated project contact keeps specifications, samples, revisions, and production milestones clear from inquiry to delivery.',
   },
   {
     icon: BadgeCheck,
-    title: 'Certified & Compliant',
+    title: 'Market-Ready Documentation',
     description:
-      'ISO 9001, CE, RoHS, FDA, and PED certifications. Full material traceability and inspection reports with every order.',
+      'Available quality records and product documentation help customers prepare for applicable testing and certification requirements.',
   },
 ];
 
@@ -54,8 +54,8 @@ export default function WhyChooseUs() {
     <section className="section-padding bg-white">
       <Container>
         <SectionTitle
-          title="Why Choose East Manufacturing?"
-          subtitle="We combine technical expertise, quality systems, and global logistics to be more than just a supplier — we're your manufacturing partner."
+          title="Why Choose Lemon?"
+          subtitle="A focused water-purification partner for product development, manufacturing, quality control, and export coordination."
         />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">

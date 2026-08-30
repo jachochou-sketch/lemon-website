@@ -5,9 +5,6 @@ import {
   Phone,
   MapPin,
   Clock,
-  Linkedin,
-  Facebook,
-  Youtube,
   ChevronRight,
 } from 'lucide-react';
 import Container from '@/components/ui/Container';
@@ -40,35 +37,9 @@ export default function Footer() {
             <p className="text-sm leading-relaxed text-slate-400 mb-4">
               {companyInfo.tagline}
             </p>
-            <div className="flex gap-3">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-4 h-4" />
-              </a>
-            </div>
+            <p className="text-xs leading-relaxed text-slate-500">
+              ODM &amp; OEM water purification solutions for international brands and distributors.
+            </p>
           </div>
 
           {/* Products Links */}

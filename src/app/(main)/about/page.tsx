@@ -19,21 +19,21 @@ import { companyInfo } from '@/data/company';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about East Manufacturing — 20+ years of precision manufacturing excellence. ISO 9001 certified, 500+ employees, serving 30+ countries worldwide.',
+    'Learn about Lemon Environmental Technology, a water purifier ODM/OEM manufacturer serving brands and distributors in more than 10 countries.',
 };
 
 const stats = [
   { icon: Factory, label: 'Factory Size', value: companyInfo.factorySize },
   { icon: Users, label: 'Employees', value: companyInfo.employees },
-  { icon: Globe, label: 'Markets', value: `${companyInfo.markets.length}+ Countries` },
+  { icon: Globe, label: 'Global Reach', value: '10+ Countries' },
   { icon: Award, label: 'Founded', value: String(companyInfo.founded) },
 ];
 
 const values = [
   {
     icon: Target,
-    title: 'Precision',
-    description: 'We hold tolerances other manufacturers consider impossible — because our clients depend on it.',
+    title: 'Water Quality First',
+    description: 'Product decisions start with filtration performance, material suitability, safety, and the user experience.',
   },
   {
     icon: Eye,
@@ -48,7 +48,7 @@ const values = [
   {
     icon: Shield,
     title: 'Reliability',
-    description: 'On-time delivery rate of 98.5%. When we commit to a date, we deliver.',
+    description: 'Documented checkpoints and clear production milestones help keep projects aligned with the agreed plan.',
   },
 ];
 
@@ -65,8 +65,8 @@ export default function AboutPage() {
             </h1>
             <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
               Founded in {companyInfo.founded}, we have grown from a small workshop into
-              a global manufacturing partner trusted by companies across{' '}
-              {companyInfo.markets.length}+ countries.
+              a water purification manufacturing partner serving brands and distributors
+              in more than 10 countries.
             </p>
           </div>
         </Container>
@@ -118,11 +118,11 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding bg-slate-50">
+      <section id="milestones" className="section-padding bg-slate-50">
         <Container>
           <SectionTitle
             title="Company Milestones"
-            subtitle="Key moments in our journey from a small workshop to a global manufacturing partner."
+            subtitle="Key moments in our development as a water purification ODM and OEM partner."
           />
 
           <div className="relative mt-12 max-w-3xl mx-auto">
@@ -164,7 +164,7 @@ export default function AboutPage() {
         <Container>
           <SectionTitle
             title="Our Values"
-            subtitle="The principles that guide every decision we make and every part we produce."
+            subtitle="The principles that guide our product development, production, and customer relationships."
           />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
             {values.map((value) => (
@@ -185,7 +185,7 @@ export default function AboutPage() {
         <Container>
           <SectionTitle
             title="Certifications & Compliance"
-            subtitle="We meet the most stringent international standards for quality, safety, and environmental compliance."
+            subtitle="Our quality systems and product documentation support the testing and compliance needs of different target markets."
           />
           <div className="grid sm:grid-cols-2 gap-6 mt-12 max-w-xl mx-auto">
             {companyInfo.certifications.map((cert) => (
@@ -203,36 +203,12 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Team */}
-      <section id="team" className="section-padding bg-white">
-        <Container>
-          <SectionTitle
-            title="Leadership Team"
-            subtitle="Meet the experienced team behind East Manufacturing's global success."
-          />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            {companyInfo.teamMembers.map((member) => (
-              <Card key={member.name} padding="none" className="overflow-hidden text-center">
-                <div className="aspect-square bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-slate-400" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-slate-900">{member.name}</h3>
-                  <p className="text-sm text-primary font-medium mb-2">{member.role}</p>
-                  <p className="text-sm text-slate-500 leading-relaxed">{member.bio}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* Global Markets */}
       <section className="section-padding bg-gradient-primary">
         <Container>
           <SectionTitle
             title="Serving Clients Worldwide"
-            subtitle="Our products reach customers across six continents. No matter where you are, we deliver."
+            subtitle="Our ODM and OEM programs support customers across a growing range of international markets."
             light
           />
           <div className="flex flex-wrap justify-center gap-3 mt-10">

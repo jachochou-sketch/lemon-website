@@ -40,12 +40,12 @@ export default function NotFound() {
           <div className="mt-12 pt-8 border-t border-slate-200">
             <p className="text-sm text-slate-500 mb-4">Popular pages</p>
             <div className="flex flex-wrap justify-center gap-3 text-sm">
-              <Link href="/products/precision-cnc-machined-parts" className="text-primary hover:underline">
-                CNC Machined Parts
+              <Link href="/products/odm-custom-water-purifier" className="text-primary hover:underline">
+                Custom Water Purifiers
               </Link>
               <span className="text-slate-300">·</span>
-              <Link href="/products/industrial-grade-aluminum-extrusions" className="text-primary hover:underline">
-                Aluminum Extrusions
+              <Link href="/products/under-sink-ro-system" className="text-primary hover:underline">
+                Under-Sink RO Systems
               </Link>
               <span className="text-slate-300">·</span>
               <Link href="/about" className="text-primary hover:underline">

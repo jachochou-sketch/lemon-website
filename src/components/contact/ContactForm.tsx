@@ -54,6 +54,7 @@ export default function ContactForm() {
 
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [fallbackEmail, setFallbackEmail] = useState('');
 
   const {
     register,
@@ -77,6 +78,7 @@ export default function ContactForm() {
   const onSubmit = async (data: ContactFormSchema) => {
     setSubmitStatus('submitting');
     setErrorMessage('');
+    setFallbackEmail('');
 
     try {
       const response = await fetch('/api/contact', {
@@ -88,6 +90,9 @@ export default function ContactForm() {
       const result = await response.json();
 
       if (!response.ok) {
+        if (result.fallbackEmail) {
+          setFallbackEmail(result.fallbackEmail);
+        }
         throw new Error(result.error || 'Something went wrong. Please try again.');
       }
 
@@ -112,7 +117,7 @@ export default function ContactForm() {
         </h3>
         <p className="text-slate-600 mb-6 max-w-md mx-auto">
           We have received your message and our team will contact you within
-          24 hours. For urgent inquiries, please call us at +86 132 5049 6024.
+          one business day. For urgent inquiries, please call us at +86 132 5049 6024.
         </p>
         <Button
           variant="outline"
@@ -134,6 +139,14 @@ export default function ContactForm() {
               Submission Failed
             </p>
             <p className="text-sm text-red-600 mt-0.5">{errorMessage}</p>
+            {fallbackEmail && (
+              <a
+                href={`mailto:${fallbackEmail}`}
+                className="inline-block text-sm font-semibold text-red-700 underline mt-2"
+              >
+                Email {fallbackEmail} directly
+              </a>
+            )}
           </div>
         </div>
       )}
