@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
@@ -65,17 +66,36 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Image Gallery */}
             <div>
-              <div className="aspect-[4/3] rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center overflow-hidden">
-                <Box className="w-24 h-24 text-white/20" />
+              <div className="relative aspect-[4/3] rounded-2xl bg-white overflow-hidden shadow-2xl shadow-black/20">
+                {product.imageAvailable && product.images[0] ? (
+                  <Image
+                    src={product.images[0]}
+                    alt={`${product.name}${product.model ? ` (${product.model})` : ''}`}
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-contain p-8"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                    <Box className="w-24 h-24 text-primary/20" />
+                  </div>
+                )}
               </div>
-              {product.images.length > 1 && (
+              {product.imageAvailable && product.images.length > 1 && (
                 <div className="flex gap-3 mt-4">
-                  {product.images.map((_, i) => (
+                  {product.images.map((image, i) => (
                     <div
                       key={i}
-                      className="w-20 h-20 rounded-lg bg-white/10 flex items-center justify-center"
+                      className="relative w-20 h-20 rounded-lg bg-white overflow-hidden"
                     >
-                      <Box className="w-8 h-8 text-white/20" />
+                      <Image
+                        src={image}
+                        alt={`${product.name} view ${i + 1}`}
+                        fill
+                        sizes="80px"
+                        className="object-contain p-2"
+                      />
                     </div>
                   ))}
                 </div>
@@ -90,6 +110,11 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 {product.name}
               </h1>
+              {product.model && (
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent mb-4">
+                  Model {product.model}
+                </p>
+              )}
               <p className="text-white/70 leading-relaxed mb-6">
                 {product.summary}
               </p>
@@ -122,13 +147,19 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                   <div>
                     <div className="text-xs text-white/50">Certifications</div>
                     <div className="text-sm font-semibold text-white">
-                      {product.certifications.join(', ')}
+                      {product.certifications.length > 0
+                        ? product.certifications.join(', ')
+                        : 'Target-market support available'}
                     </div>
                   </div>
                 </div>
               </div>
 
-              <InquiryButton productName={product.name} />
+              <InquiryButton
+                productName={product.name}
+                productModel={product.model}
+                serviceOptions={product.serviceOptions ?? ['OEM', 'ODM']}
+              />
             </div>
           </div>
         </Container>

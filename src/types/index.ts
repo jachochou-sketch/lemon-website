@@ -10,12 +10,15 @@ export interface SpecItem {
 export interface Product {
   slug: string;
   name: string;
+  model?: string;
   category: string;
   summary: string;
   description: string;
   images: string[];
+  imageAvailable?: boolean;
   specifications: SpecItem[];
   certifications: string[];
+  serviceOptions?: Array<'OEM' | 'ODM'>;
   minOrder: string;
   supplyAbility: string;
   deliveryTime: string;
@@ -96,6 +99,7 @@ export interface ContactFormData {
   phone: string;
   country: string;
   productInterest: string;
+  serviceType: 'OEM' | 'ODM';
   message: string;
 }
 

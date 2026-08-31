@@ -27,6 +27,9 @@ export const contactFormSchema = z.object({
     .string()
     .min(1, 'Please select your country'),
   productInterest: z.string().optional(),
+  serviceType: z.enum(['OEM', 'ODM'], {
+    required_error: 'Please select OEM or ODM',
+  }),
   message: z
     .string()
     .min(10, 'Message must be at least 10 characters')

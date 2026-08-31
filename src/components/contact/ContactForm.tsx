@@ -9,6 +9,7 @@ import Input from '@/components/ui/Input';
 import Textarea from '@/components/ui/Textarea';
 import Select from '@/components/ui/Select';
 import Button from '@/components/ui/Button';
+import { products } from '@/data/products';
 import {
   contactFormSchema,
   type ContactFormSchema,
@@ -37,13 +38,19 @@ const countryOptions = [
 
 const productOptions = [
   { value: '', label: 'Select product interest (optional)' },
-  { value: 'RO Water Purifiers', label: 'RO Water Purifiers' },
-  { value: 'UF Water Purifiers', label: 'UF Water Purifiers' },
-  { value: 'UV Sterilization Systems', label: 'UV Sterilization Systems' },
-  { value: 'Water Softener Systems', label: 'Water Softener Systems' },
-  { value: 'RO Membrane Elements', label: 'RO Membrane Elements' },
-  { value: 'Replacement Filters', label: 'Replacement Filters' },
   { value: 'Custom ODM / OEM', label: 'Custom ODM / OEM' },
+  ...products.map((product) => {
+    const label = product.model
+      ? `${product.name} (${product.model})`
+      : product.name;
+    return { value: label, label };
+  }),
+];
+
+const serviceOptions = [
+  { value: '', label: 'Select OEM or ODM' },
+  { value: 'OEM', label: 'OEM — Private label an existing product' },
+  { value: 'ODM', label: 'ODM — Customize or develop a product' },
 ];
 
 type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error';
@@ -51,6 +58,10 @@ type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error';
 export default function ContactForm() {
   const searchParams = useSearchParams();
   const defaultProduct = searchParams.get('product') || '';
+  const serviceParam = searchParams.get('service');
+  const defaultService = serviceParam === 'OEM' || serviceParam === 'ODM'
+    ? serviceParam
+    : '';
 
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -71,6 +82,7 @@ export default function ContactForm() {
       phone: '',
       country: '',
       productInterest: defaultProduct,
+      serviceType: defaultService as 'OEM' | 'ODM',
       message: '',
     },
   });
@@ -204,6 +216,16 @@ export default function ContactForm() {
           error={errors.country?.message}
           required
         />
+        <Select
+          label="Service Type"
+          options={serviceOptions}
+          {...register('serviceType')}
+          error={errors.serviceType?.message}
+          required
+        />
+      </div>
+
+      <div className="mb-4">
         <Select
           label="Product Interest"
           options={productOptions}

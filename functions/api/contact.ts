@@ -6,6 +6,7 @@ type ContactPayload = {
   phone?: string;
   country?: string;
   productInterest?: string;
+  serviceType?: 'OEM' | 'ODM';
   message?: string;
 };
 
@@ -56,6 +57,7 @@ export const onRequestPost = async ({
       'email',
       'company',
       'country',
+      'serviceType',
       'message',
     ];
 
@@ -100,7 +102,7 @@ export const onRequestPost = async ({
     const toEmail = env.CONTACT_TO_EMAIL || fallbackEmail;
     const fromEmail =
       env.CONTACT_FROM_EMAIL || 'Lemon Website <onboarding@resend.dev>';
-    const subjectContext = display(data.productInterest || data.company).slice(0, 80);
+    const subjectContext = display(data.productInterest || data.company).slice(0, 70);
     const fullName = `${data.firstName!.trim()} ${data.lastName!.trim()}`;
 
     const emailResponse = await fetch('https://api.resend.com/emails', {
@@ -113,13 +115,14 @@ export const onRequestPost = async ({
         from: fromEmail,
         to: [toEmail],
         reply_to: data.email!.trim(),
-        subject: `Website inquiry: ${subjectContext}`,
+        subject: `${display(data.serviceType)} website inquiry: ${subjectContext}`,
         text: [
           `Name: ${fullName}`,
           `Email: ${data.email!.trim()}`,
           `Company: ${data.company!.trim()}`,
           `Phone: ${display(data.phone)}`,
           `Country: ${data.country!.trim()}`,
+          `Service type: ${display(data.serviceType)}`,
           `Product interest: ${display(data.productInterest)}`,
           '',
           'Message:',
@@ -132,6 +135,7 @@ export const onRequestPost = async ({
           <p><strong>Company:</strong> ${escapeHtml(data.company)}</p>
           <p><strong>Phone:</strong> ${escapeHtml(display(data.phone))}</p>
           <p><strong>Country:</strong> ${escapeHtml(data.country)}</p>
+          <p><strong>Service type:</strong> ${escapeHtml(display(data.serviceType))}</p>
           <p><strong>Product interest:</strong> ${escapeHtml(display(data.productInterest))}</p>
           <h3>Message</h3>
           <p>${escapeHtml(data.message).replaceAll('\n', '<br />')}</p>

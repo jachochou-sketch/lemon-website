@@ -1,6 +1,7 @@
 import { Product } from '@/types';
+import { catalogProducts } from '@/data/catalog-products';
 
-export const products: Product[] = [
+const existingProducts: Product[] = [
   {
     slug: 'odm-custom-water-purifier',
     name: 'ODM Custom Water Purifier Solutions',
@@ -255,6 +256,8 @@ in pipes, water heaters, and appliances.
     featured: false,
   },
 ];
+
+export const products: Product[] = [...catalogProducts, ...existingProducts];
 
 export const productCategories = [
   'All Products',
