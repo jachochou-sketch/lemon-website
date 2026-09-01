@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, Calendar, User, Clock, Tag, ChevronRight } from 'lucide-react';
@@ -32,6 +33,7 @@ export function generateMetadata({ params }: BlogPostPageProps): Metadata {
       publishedTime: post.publishedAt,
       authors: [post.author],
       tags: post.tags,
+      images: [{ url: post.coverImage, alt: post.title }],
     },
   };
 }
@@ -90,6 +92,22 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.tags.join(', ')}
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Article Cover */}
+      <section className="relative z-10 -mt-8">
+        <Container>
+          <div className="relative mx-auto aspect-[16/9] max-w-5xl overflow-hidden rounded-2xl bg-slate-100 shadow-2xl shadow-slate-900/20">
+            <Image
+              src={post.coverImage}
+              alt={`${post.title} cover`}
+              fill
+              priority
+              sizes="(min-width: 1024px) 1024px, 100vw"
+              className="object-cover"
+            />
           </div>
         </Container>
       </section>
