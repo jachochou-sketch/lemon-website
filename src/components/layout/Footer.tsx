@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import {
-  Factory,
   Mail,
   Phone,
   MapPin,
@@ -21,17 +21,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Company Info */}
           <div>
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <div className="w-9 h-9 bg-accent rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
-                  <path d="M8 12c0-2.5 2-4 4-4s4 1.5 4 4" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div>
-                <span className="text-lg font-bold text-white">
-                  Lemon
-                </span>
+            <Link href="/" className="inline-flex mb-4" aria-label="Lemon Environmental Technology home">
+              <div className="w-16 h-16 rounded-xl bg-white p-1.5 shadow-sm">
+                <Image
+                  src="/images/brand/lemon-logo-concept-v2-transparent.png"
+                  alt="Lemon Environmental Technology"
+                  width={1309}
+                  height={1201}
+                  className="w-full h-full object-contain"
+                />
               </div>
             </Link>
             <p className="text-sm leading-relaxed text-slate-400 mb-4">

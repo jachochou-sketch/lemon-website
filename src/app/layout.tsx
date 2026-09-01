@@ -28,6 +28,10 @@ export const metadata: Metadata = {
     'private label water purifier',
   ],
   robots: { index: true, follow: true },
+  icons: {
+    icon: '/images/brand/lemon-logo-concept-v2-transparent.png',
+    apple: '/images/brand/lemon-logo-concept-v2-transparent.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

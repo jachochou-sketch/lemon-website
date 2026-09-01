@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useCallback } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { X } from 'lucide-react';
@@ -70,7 +71,15 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
         aria-label="Mobile navigation"
       >
         <div className="flex items-center justify-between p-4 border-b border-slate-200">
-          <span className="font-bold text-lg text-primary">Lemon</span>
+          <Link href="/" aria-label="Lemon Environmental Technology home">
+            <Image
+              src="/images/brand/lemon-logo-concept-v2-transparent.png"
+              alt="Lemon Environmental Technology"
+              width={1309}
+              height={1201}
+              className="w-11 h-11 object-contain"
+            />
+          </Link>
           <button
             onClick={onClose}
             className="p-2 rounded-lg hover:bg-slate-100 transition-colors"

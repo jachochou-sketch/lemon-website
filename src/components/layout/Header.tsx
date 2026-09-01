@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, Factory } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/data/navigation';
 import Container from '@/components/ui/Container';
@@ -36,22 +37,15 @@ export default function Header() {
         <Container>
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 bg-primary rounded-lg flex items-center justify-center group-hover:bg-primary-light transition-colors">
-                <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
-                  <path d="M8 12c0-2.5 2-4 4-4s4 1.5 4 4" strokeLinecap="round" />
-                  <path d="M12 8v8" strokeLinecap="round" />
-                </svg>
-              </div>
-              <div>
-                <span className="text-lg font-bold text-slate-900 leading-tight block">
-                  Lemon
-                </span>
-                <span className="text-[10px] text-slate-500 leading-tight hidden sm:block">
-                  Environmental Technology
-                </span>
-              </div>
+            <Link href="/" className="flex items-center group" aria-label="Lemon Environmental Technology home">
+              <Image
+                src="/images/brand/lemon-logo-concept-v2-transparent.png"
+                alt="Lemon Environmental Technology"
+                width={1309}
+                height={1201}
+                priority
+                className="w-12 h-12 lg:w-14 lg:h-14 object-contain transition-transform duration-200 group-hover:scale-105"
+              />
             </Link>
 
             {/* Desktop Nav */}
