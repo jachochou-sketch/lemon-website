@@ -20,7 +20,7 @@ type ResendResponse = {
   id?: string;
 };
 
-const fallbackEmail = 'jachochou@gmail.com';
+const fallbackEmail = 'jacho@lemonenviro.com';
 
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {

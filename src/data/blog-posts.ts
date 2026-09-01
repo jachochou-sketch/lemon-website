@@ -51,7 +51,7 @@ When discussing ODM/OEM with your manufacturer, ask:
 3. Can you customize the number of filtration stages?
 4. What are the replacement filter costs for end users?
 
-Contact **jachochou@gmail.com** for a consultation on which technology
+Contact **jacho@lemonenviro.com** for a consultation on which technology
 best fits your target market.
     `.trim(),
     coverImage: '/images/blog/ro-vs-uf.jpg',
@@ -116,7 +116,7 @@ Generic white-label products are losing to:
 - Market-specific certifications (ISI, SASO, SON, etc.)
 
 **Want to discuss how these trends affect your product strategy?**
-Contact our OEM team at **jachochou@gmail.com**.
+Contact our OEM team at **jacho@lemonenviro.com**.
     `.trim(),
     coverImage: '/images/blog/trends-2026.jpg',
     category: 'Industry News',
@@ -397,7 +397,7 @@ Lemon Environmental Technology offers:
 - Direct-to-consumer fulfillment (your brand, we ship)
 - Bulk filter supply for your distribution channel
 
-**Contact us at jachochou@gmail.com** to set up your replacement filter program.
+**Contact us at jacho@lemonenviro.com** to set up your replacement filter program.
     `.trim(),
     coverImage: '/images/blog/filter-guide.jpg',
     category: 'Case Studies',

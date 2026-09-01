@@ -109,10 +109,10 @@ export default function PrivacyPage() {
                 <p className="text-slate-600 leading-relaxed">
                   For privacy questions or requests, email{' '}
                   <a
-                    href="mailto:jachochou@gmail.com"
+                    href="mailto:jacho@lemonenviro.com"
                     className="text-primary font-medium hover:underline"
                   >
-                    jachochou@gmail.com
+                    jacho@lemonenviro.com
                   </a>
                   .
                 </p>

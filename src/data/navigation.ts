@@ -24,7 +24,7 @@ export const footerLinks = {
     { label: 'Contact', href: '/contact' },
   ],
   contact: [
-    { label: 'jachochou@gmail.com', href: 'mailto:jachochou@gmail.com' },
+    { label: 'jacho@lemonenviro.com', href: 'mailto:jacho@lemonenviro.com' },
     { label: '+86 13250496024', href: 'tel:+8613250496024' },
     { label: 'Zhongshan, Guangdong, China', href: '#' },
   ],

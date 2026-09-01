@@ -78,10 +78,10 @@ export default function TermsPage() {
                 <p className="text-slate-600 leading-relaxed">
                   Questions about these terms may be sent to{' '}
                   <a
-                    href="mailto:jachochou@gmail.com"
+                    href="mailto:jacho@lemonenviro.com"
                     className="text-primary font-medium hover:underline"
                   >
-                    jachochou@gmail.com
+                    jacho@lemonenviro.com
                   </a>
                   .
                 </p>
