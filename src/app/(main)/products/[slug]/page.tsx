@@ -74,7 +74,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
                     fill
                     priority
                     sizes="(min-width: 1024px) 50vw, 100vw"
-                    className="object-contain p-8"
+                    className="object-cover"
                   />
                 ) : (
                   <div className="absolute inset-0 bg-white/10 backdrop-blur-sm flex items-center justify-center">

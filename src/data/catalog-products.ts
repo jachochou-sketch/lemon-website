@@ -37,7 +37,7 @@ Designed for homes and markets where a quiet, energy-free purification solution 
 ### OEM/ODM Options
 - Custom logo, housing color, filtration configuration, packaging and multilingual manual
 - Product adaptation for target-market water conditions and installation standards`,
-    images: ['/images/products/lm-r1001.jpg'],
+    images: ['/images/products/lm-r1001-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-R1001' },
       { label: 'Color', value: 'White' },
@@ -77,7 +77,7 @@ A compact residential direct-drinking system built around an integrated waterway
 ### OEM/ODM Options
 - Private-label logo, housing color, cartridge configuration and packaging
 - Electrical specification, faucet style and target-market installation kit customization`,
-    images: ['/images/products/lm-r3100-series.jpg'],
+    images: ['/images/products/lm-r3100-series-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-R3100' },
       { label: 'Nominal Capacity', value: '100 GPD class' },
@@ -116,7 +116,7 @@ The LM-R3500 extends the LM-R series to higher-capacity applications while retai
 ### OEM/ODM Options
 - Custom capacity, membrane, logo, color, faucet and packaging
 - Market-specific power, plumbing connections and documentation`,
-    images: ['/images/products/lm-r3100-series.jpg'],
+    images: ['/images/products/lm-r3100-series-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-R3500' },
       { label: 'Nominal Capacity', value: '500 GPD class' },
@@ -152,7 +152,7 @@ A compact residential RO system combining a four-stage filtration path with an e
 ### OEM/ODM Options
 - Logo, color, control panel, cartridge configuration and retail packaging
 - Faucet, power adapter and documentation customization for target markets`,
-    images: ['/images/products/lm-r3100-zhiyuan.jpg'],
+    images: ['/images/products/lm-r3100-zhiyuan-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-R3100 (Zhiyuan)' },
       { label: 'Color', value: 'White' },
@@ -191,7 +191,7 @@ Installed upstream of a drinking-water purifier, the LM-UF6106 removes sediment,
 ### OEM/ODM Options
 - Custom logo, label, housing color, connector size and packaging
 - Membrane area and flow configuration can be adapted to project requirements`,
-    images: ['/images/products/lm-uf6106.jpg'],
+    images: ['/images/products/lm-uf6106-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-UF6106' },
       { label: 'Color', value: 'White / Gray' },
@@ -229,7 +229,7 @@ A durable whole-line ultrafiltration unit for residential and light-commercial w
 ### OEM/ODM Options
 - Custom flow rate, ports, bracket, logo plate and packaging
 - Membrane, finish and installation configuration for project requirements`,
-    images: ['/images/products/lm-uf6000-series.jpg'],
+    images: ['/images/products/lm-uf6000-series-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-UF6110' },
       { label: 'Color', value: 'Natural stainless-steel finish' },
@@ -265,7 +265,7 @@ The LM-UF6530 is a higher-flow member of Lemon's stainless-steel pipeline series
 
 ### OEM/ODM Options
 - Custom ports, flow rating, surface finish, logo plate, packaging and installation kit`,
-    images: ['/images/products/lm-uf6000-series.jpg'],
+    images: ['/images/products/lm-uf6000-series-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-UF6530' },
       { label: 'Color', value: 'Natural stainless-steel finish' },
@@ -301,7 +301,7 @@ The largest model in the listed stainless-steel pipeline series, designed for ap
 
 ### OEM/ODM Options
 - Custom flow rating, ports, finish, branding, bracket and project packaging`,
-    images: ['/images/products/lm-uf6000-series.jpg'],
+    images: ['/images/products/lm-uf6000-series-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-UF6540' },
       { label: 'Color', value: 'Natural stainless-steel finish' },
@@ -337,7 +337,7 @@ A central water-treatment unit for sediment reduction and activated-carbon condi
 
 ### OEM/ODM Options
 - Custom media combination, ports, logo, finish, cartridge specification and packaging`,
-    images: ['/images/products/lm-pbc3000-series.jpg'],
+    images: ['/images/products/lm-pbc3000-series-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-PBC3000' },
       { label: 'Color', value: 'Natural stainless-steel finish' },
@@ -373,7 +373,7 @@ A compact central-ultrafiltration configuration that combines whole-house flow w
 
 ### OEM/ODM Options
 - Custom membrane, cartridge, connection ports, branding, finish and packaging`,
-    images: ['/images/products/lm-pbc3000-series.jpg'],
+    images: ['/images/products/lm-pbc3000-series-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-UF6530 Pro' },
       { label: 'Color', value: 'Natural stainless-steel finish' },
@@ -410,7 +410,7 @@ A compact direct-drinking ultrafiltration system with two complementary cartridg
 ### OEM/ODM Options
 - Custom logo, cartridge media, housing color, control panel and packaging
 - Market-specific power and connector configuration`,
-    images: ['/images/products/lm-uf6103.jpg'],
+    images: ['/images/products/lm-uf6103-water.jpg'],
     specifications: [
       { label: 'Model', value: 'LM-UF6103 (Two-Stage)' },
       { label: 'Color', value: 'White' },

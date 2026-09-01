@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             alt={`${product.name}${product.model ? ` (${product.model})` : ''}`}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-            className="object-contain p-6 transition-transform duration-300 group-hover:scale-105"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
           <Box className="w-16 h-16 text-slate-300" />
