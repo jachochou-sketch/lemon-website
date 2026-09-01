@@ -37,11 +37,8 @@ closely with you to create a product that stands out in your market.
 - Flexible MOQ starting from 300 units
 - 10,000 m² facility with advanced production lines
 - End-to-end support from concept to container`,
-    images: [
-      '/images/products/odm-1.jpg',
-      '/images/products/odm-2.jpg',
-      '/images/products/odm-3.jpg',
-    ],
+    images: ['/images/products/odm-water-purifier-bom.jpg'],
+    imageAvailable: true,
     specifications: [
       { label: 'Service Type', value: 'Full ODM (Design → Manufacturing → Packaging)' },
       { label: 'Customization Scope', value: 'ID design, filtration stages, smart features, branding' },
