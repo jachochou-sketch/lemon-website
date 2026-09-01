@@ -77,6 +77,7 @@ NSF, CE, RoHS, and ISO 9001 standards.`,
     address: 'Building 2-3, Caixun Technology Park, Minzhong Street, Zhongshan City, Guangdong 528441, China',
     phone: '+86 13250496024',
     email: 'jacho@lemonenviro.com',
+    linkedin: 'https://www.linkedin.com/in/jacho-chou-204ba3386/',
     workingHours: 'Mon - Fri, 8:30 AM - 5:30 PM (CST / UTC+8)',
   },
 };

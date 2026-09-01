@@ -68,6 +68,7 @@ export interface ContactDetails {
   address: string;
   phone: string;
   email: string;
+  linkedin: string;
   workingHours: string;
 }
 

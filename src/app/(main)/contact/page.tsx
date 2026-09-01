@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
-import { Mail, Phone, MapPin, Clock, Send, Loader2, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Linkedin, Send, Loader2, CheckCircle2 } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Card from '@/components/ui/Card';
 import ContactForm from '@/components/contact/ContactForm';
@@ -26,6 +26,13 @@ const contactMethods = [
     value: companyInfo.contact.phone,
     href: `tel:${companyInfo.contact.phone}`,
     description: 'Call us during business hours',
+  },
+  {
+    icon: Linkedin,
+    label: 'LinkedIn',
+    value: 'Jacho Chou',
+    href: companyInfo.contact.linkedin,
+    description: 'Connect with us on LinkedIn',
   },
   {
     icon: MapPin,
@@ -95,11 +102,15 @@ export default function ContactPage() {
             <div className="space-y-4">
               {contactMethods.map((method) => {
                 const isLink = method.href !== '#';
+                const isExternal = method.href.startsWith('http');
                 const Component = isLink ? 'a' : 'div';
                 return (
                 <Card key={method.label} padding="md" hover>
                   <Component
-                    {...(isLink ? { href: method.href } : {})}
+                    {...(isLink ? {
+                      href: method.href,
+                      ...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {}),
+                    } : {})}
                     className="flex items-start gap-4"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">

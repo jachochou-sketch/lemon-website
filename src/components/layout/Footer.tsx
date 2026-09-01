@@ -5,6 +5,7 @@ import {
   Phone,
   MapPin,
   Clock,
+  Linkedin,
   ChevronRight,
 } from 'lucide-react';
 import Container from '@/components/ui/Container';
@@ -100,6 +101,18 @@ export default function Footer() {
                 >
                   <Mail className="w-4 h-4 text-accent flex-shrink-0" />
                   {companyInfo.contact.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={companyInfo.contact.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex gap-3 text-sm text-slate-400 hover:text-accent transition-colors"
+                  aria-label="Jacho Chou on LinkedIn (opens in a new tab)"
+                >
+                  <Linkedin className="w-4 h-4 text-accent flex-shrink-0" />
+                  LinkedIn — Jacho Chou
                 </a>
               </li>
               <li className="flex gap-3 text-sm text-slate-400">
