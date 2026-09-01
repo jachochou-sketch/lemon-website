@@ -57,85 +57,6 @@ closely with you to create a product that stands out in your market.
     featured: true,
   },
   {
-    slug: 'ro-water-purifier-countertop',
-    name: 'Countertop RO Water Purifier',
-    category: 'RO Systems',
-    summary: 'Sleek countertop reverse osmosis purifier with 5-stage filtration, instant heating, and smart TDS monitoring. Ideal for home and office use.',
-    description: `## Countertop RO Water Purifier
-
-Our best-selling countertop RO system combines advanced reverse osmosis filtration
-with modern design and smart features. No installation required — simply plug in,
-fill the tank, and enjoy pure water instantly.
-
-### Key Features
-- **5-Stage Filtration**: PP + CTO + RO Membrane + Post Carbon + UF
-- **RO Membrane**: 75 GPD high-rejection Filmtec-grade membrane
-- **Instant Heating**: 4 temperature settings (25°C, 45°C, 85°C, 100°C)
-- **Smart Display**: Real-time TDS monitoring, filter life indicator, child lock
-- **Tank Capacity**: 5L raw water + 1.5L pure water
-
-### ODM/OEM Customization Options
-- Branding: Custom logo, color, panel design
-- Features: Add UV sterilization, alkaline filter, mineral cartridge
-- Packaging: Custom retail box, user manual in your language`,
-    images: [
-      '/images/products/countertop-ro-1.jpg',
-      '/images/products/countertop-ro-2.jpg',
-    ],
-    specifications: [
-      { label: 'Filtration Stages', value: 'PP + CTO + RO + Post Carbon + UF (5 stages)' },
-      { label: 'RO Membrane', value: '75 GPD, Filmtec-grade, 0.0001μm' },
-      { label: 'Pure Water Capacity', value: '15 L/hour' },
-      { label: 'Tank Capacity', value: '5L raw + 1.5L pure' },
-      { label: 'Heating Power', value: '2200W' },
-      { label: 'MOQ (OEM)', value: '500 units' },
-    ],
-    certifications: ['ISO 9001:2015', 'CE', 'RoHS', 'NSF/ANSI 58'],
-    minOrder: '500 units (OEM)',
-    supplyAbility: '10,000 units/month',
-    deliveryTime: '45-60 days',
-    featured: true,
-  },
-  {
-    slug: 'under-sink-ro-system',
-    name: 'Under-Sink Reverse Osmosis System',
-    category: 'RO Systems',
-    summary: 'High-capacity under-sink RO water filtration system with 600 GPD output. Tankless design saves space while delivering continuous pure water.',
-    description: `## Under-Sink Reverse Osmosis System
-
-A high-flow tankless RO system designed for modern kitchens. The compact under-sink
-installation saves counter space while delivering up to 600 gallons of pure water per day.
-
-### Key Features
-- **Tankless Design**: Saves under-sink space, no secondary contamination risk
-- **High Flow Rate**: 600 GPD, fills a cup in 8 seconds
-- **Triple Composite Filter**: PP+C+RO integrated for easy maintenance
-- **Smart Faucet**: LED indicator shows filter status and water quality
-- **Waste Ratio**: Industry-leading 1:1 pure-to-waste ratio
-
-### ODM/OEM Customization
-- Flow rate variants: 400G / 600G / 800G / 1000G
-- Smart faucet styles and finishes
-- IoT module for app connectivity (optional)`,
-    images: [
-      '/images/products/undersink-ro-1.jpg',
-      '/images/products/undersink-ro-2.jpg',
-    ],
-    specifications: [
-      { label: 'Flow Rate', value: '600 GPD (1.6 L/min)' },
-      { label: 'Filtration', value: 'PP + CTO + RO Composite Filter' },
-      { label: 'Waste Ratio', value: '1:1 (pure : waste)' },
-      { label: 'Dimensions', value: '400 × 160 × 380 mm' },
-      { label: 'Power', value: '100W (pump)' },
-      { label: 'MOQ (OEM)', value: '300 units' },
-    ],
-    certifications: ['ISO 9001:2015', 'CE', 'RoHS', 'NSF/ANSI 58'],
-    minOrder: '300 units (OEM)',
-    supplyAbility: '8,000 units/month',
-    deliveryTime: '45-60 days',
-    featured: true,
-  },
-  {
     slug: 'ro-membrane-elements',
     name: 'RO Membrane Elements (Filmtec-Grade)',
     category: 'Components',
@@ -212,46 +133,6 @@ brands. We offer both standard and custom specifications with private labeling.
     certifications: ['ISO 9001:2015', 'CE', 'RoHS', 'NSF/ANSI 42'],
     minOrder: '2,000 units',
     supplyAbility: '500,000 units/month',
-    deliveryTime: '45-60 days',
-    featured: false,
-  },
-  {
-    slug: 'water-softener-system',
-    name: 'Whole-House Water Softener System',
-    category: 'UF Systems',
-    summary: 'Automatic ion-exchange water softener for whole-house protection. Removes hardness minerals, prevents scale buildup, and extends appliance life.',
-    description: `## Whole-House Water Softener System
-
-Automatic water softeners that protect your entire home from hard water damage.
-Ion-exchange resin removes calcium and magnesium ions, preventing scale buildup
-in pipes, water heaters, and appliances.
-
-### Key Features
-- **Automatic Regeneration**: Time-based or meter-based control valve
-- **High Capacity Resin**: Food-grade ion-exchange resin, 25L-50L options
-- **Brine Tank**: Included with safety float valve
-- **LCD Controller**: Easy programming for regeneration cycles
-- **Flow Rates**: 1.5 - 3.0 m³/hour depending on model
-
-### OEM Customization
-- Cabinet color and design
-- Control valve brand (Runxin, Fleck, Clack compatible)
-- Capacity and flow rate variants`,
-    images: [
-      '/images/products/softener-1.jpg',
-      '/images/products/softener-2.jpg',
-    ],
-    specifications: [
-      { label: 'Resin Volume', value: '25L / 35L / 50L' },
-      { label: 'Flow Rate', value: '1.5 - 3.0 m³/hour' },
-      { label: 'Control Valve', value: 'Automatic, time/meter-based' },
-      { label: 'Inlet/Outlet', value: '3/4" or 1" BSP' },
-      { label: 'Regeneration', value: 'Down-flow brine, ~120 min cycle' },
-      { label: 'MOQ (OEM)', value: '100 units' },
-    ],
-    certifications: ['ISO 9001:2015', 'CE'],
-    minOrder: '100 units (OEM)',
-    supplyAbility: '3,000 units/month',
     deliveryTime: '45-60 days',
     featured: false,
   },
