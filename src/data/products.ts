@@ -55,82 +55,78 @@ closely with you to create a product that stands out in your market.
   },
   {
     slug: 'ro-membrane-elements',
-    name: 'RO Membrane Elements (Filmtec-Grade)',
+    name: 'PAC + RO Split Replacement Filter Set',
+    model: '902-0493 / 902-0492',
     category: 'Components',
-    summary: 'High-rejection reverse osmosis membrane elements for residential and commercial systems. Available in 50-400 GPD with TDS rejection rate ≥ 97%.',
-    description: `## RO Membrane Elements
+    summary: 'A two-cartridge replacement set combining a PAC carbon-composite pre-filter with an RO membrane cartridge for split-filter water purifier platforms.',
+    description: `## PAC + RO Split Replacement Filter Set
 
-We manufacture high-quality reverse osmosis membrane elements equivalent to
-Filmtec/DOW standards. Our automated rolling and testing lines ensure consistent
-performance across every batch.
+This two-cartridge configuration combines pre-treatment and precision reverse-osmosis filtration in a compact split-filter format.
 
-### Available Specifications
-- **50 GPD**: Standard residential use
-- **75 GPD**: Popular mid-range option
-- **100 GPD**: Higher flow for family use
-- **200-400 GPD**: Commercial/light industrial
+### Filter Configuration
+- **PAC Cartridge (902-0493)**: Carbon-composite pre-filter for particulate and adsorption treatment
+- **RO Cartridge (902-0492)**: Reverse-osmosis membrane cartridge for fine dissolved-solids reduction
 
-### Quality Control
-- 100% vacuum testing before shipment
-- TDS rejection tested on every batch (≥ 97%)
-- Dry and wet packaging options
-- Shelf life: 24 months (dry), 12 months (wet)`,
-    images: [
-      '/images/products/ro-membrane-1.jpg',
-      '/images/products/ro-membrane-2.jpg',
-    ],
+### Replacement Schedule
+- PAC cartridge: replace every 4-6 months
+- RO cartridge: replace every 12-24 months
+
+### OEM & ODM Options
+- Private-label cartridge printing and packaging
+- Housing color and connector customization
+- Filter-stage configuration for target-market water conditions`,
+    images: ['/images/products/pac-ro-split-filter-water.jpg'],
+    imageAvailable: true,
     specifications: [
-      { label: 'Flow Rates', value: '50 / 75 / 100 / 200 / 400 GPD' },
-      { label: 'TDS Rejection', value: '≥ 97% (NaCl, 250ppm, 60PSI)' },
-      { label: 'Membrane Type', value: 'Thin Film Composite (TFC) polyamide' },
-      { label: 'Dimensions', value: '1812 / 2012 / 3012 / 3013 sizes' },
-      { label: 'Operating pH', value: '2-11' },
-      { label: 'MOQ', value: '1,000 pcs per specification' },
+      { label: 'PAC Product Code', value: '902-0493' },
+      { label: 'RO Product Code', value: '902-0492' },
+      { label: 'PAC Service Life', value: '4-6 months' },
+      { label: 'RO Service Life', value: '12-24 months' },
+      { label: 'Packing', value: '25 pcs per carton, per type' },
+      { label: 'Configuration', value: 'Split PAC + RO cartridges' },
     ],
-    certifications: ['ISO 9001:2015', 'CE', 'NSF/ANSI 58'],
-    minOrder: '1,000 units',
-    supplyAbility: '100,000 units/month',
-    deliveryTime: '45-60 days',
+    certifications: [],
+    serviceOptions: ['OEM', 'ODM'],
+    minOrder: '5 cartons',
+    supplyAbility: 'Confirm with sales',
+    deliveryTime: 'Confirm with sales',
     featured: false,
   },
   {
     slug: 'replacement-filter-cartridges',
-    name: 'Replacement Filter Cartridges (PP, CTO, UF)',
+    name: 'LM-R3500 Four-Stage Replacement Filter Set',
+    model: '902-0269 / 0270 / 0271 / 0273',
     category: 'Components',
-    summary: 'Full range of replacement filter cartridges: PP sediment, CTO carbon block, UF hollow fiber, and post-carbon inline filters for all major purifier brands.',
-    description: `## Replacement Filter Cartridges
+    summary: 'A complete PP, C1, RO 500G and C2 quick-change cartridge set for the LM-R3500 water purifier, with staged replacement intervals for consistent performance.',
+    description: `## LM-R3500 Four-Stage Replacement Filter Set
 
-A complete range of replacement filter cartridges compatible with most water purifier
-brands. We offer both standard and custom specifications with private labeling.
+This matched quick-change cartridge set is designed for the LM-R3500 (Zhichun) 500G reverse-osmosis water purifier.
 
-### Product Range
-- **PP Sediment Filters**: 1μm / 5μm / 10μm, standard 10" size
-- **CTO Carbon Block**: Coconut shell carbon, 5μm & 10μm ratings
-- **GAC Cartridges**: Granular activated carbon for taste & odor
-- **UF Hollow Fiber**: 0.01μm for ultrafiltration systems
-- **Post-Carbon Inline**: Quick-connect fittings, various sizes
-- **Alkaline / Mineral Balls**: PH balancing and remineralization
+### Four-Stage Configuration
+- **PP Cartridge (902-0269)**: Sediment pre-filtration; replace every 4-6 months
+- **C1 Cartridge (902-0270)**: Pre-carbon filtration; replace every 4-6 months
+- **RO 500G Cartridge (902-0273)**: Reverse-osmosis membrane stage; replace every 12-24 months
+- **C2 Cartridge (902-0271)**: Post-carbon polishing stage; replace every 9-12 months
 
-### OEM Options
-- Custom dimensions and connector types
-- Private label packaging
-- Multi-pack retail bundles`,
-    images: [
-      '/images/products/filters-1.jpg',
-      '/images/products/filters-2.jpg',
-    ],
+### OEM & ODM Options
+- Private-label cartridge printing
+- Branded retail packaging and multi-stage bundles
+- Connector and filter-media customization for approved projects`,
+    images: ['/images/products/lm-r3500-four-stage-filter-water.jpg'],
+    imageAvailable: true,
     specifications: [
-      { label: 'Types', value: 'PP, CTO, GAC, UF, Post-Carbon, Alkaline' },
-      { label: 'PP Ratings', value: '1μm, 5μm, 10μm' },
-      { label: 'Carbon Material', value: 'Coconut shell activated carbon' },
-      { label: 'Standard Size', value: '10" x 2.5" (custom available)' },
-      { label: 'Lifespan', value: '3-12 months depending on water quality' },
-      { label: 'MOQ', value: '2,000 pcs per type' },
+      { label: 'Compatible System', value: 'LM-R3500 (Zhichun), 500G' },
+      { label: 'PP / C1 Codes', value: '902-0269 / 902-0270' },
+      { label: 'RO / C2 Codes', value: '902-0273 / 902-0271' },
+      { label: 'Filter Stages', value: 'PP + C1 + RO 500G + C2' },
+      { label: 'Service Life', value: '4-24 months by cartridge' },
+      { label: 'Packing', value: '25 pcs per carton, per type' },
     ],
-    certifications: ['ISO 9001:2015', 'CE', 'RoHS', 'NSF/ANSI 42'],
-    minOrder: '2,000 units',
-    supplyAbility: '500,000 units/month',
-    deliveryTime: '45-60 days',
+    certifications: [],
+    serviceOptions: ['OEM', 'ODM'],
+    minOrder: '5 cartons',
+    supplyAbility: 'Confirm with sales',
+    deliveryTime: 'Confirm with sales',
     featured: false,
   },
 ];
