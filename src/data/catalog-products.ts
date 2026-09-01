@@ -129,6 +129,7 @@ The LM-R3500 extends the LM-R series to higher-capacity applications while retai
       { label: 'Dimensions', value: '389 × 180 × 430 mm' },
     ],
     ...commonCommercialTerms,
+    featured: true,
   },
   {
     slug: 'lm-r3100-zhiyuan-ro-water-purifier',
@@ -277,6 +278,7 @@ The LM-UF6530 is a higher-flow member of Lemon's stainless-steel pipeline series
       { label: 'Feed Water', value: 'Tap water' },
     ],
     ...commonCommercialTerms,
+    featured: true,
   },
   {
     slug: 'lm-uf6540-high-flow-ultrafiltration-purifier',
