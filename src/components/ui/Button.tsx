@@ -38,7 +38,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const styles = cn(
-    'inline-flex items-center justify-center font-semibold tracking-[-0.01em] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
+    'group inline-flex items-center justify-center font-semibold tracking-[-0.01em] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
     variantStyles[variant],
     sizeStyles[size],
     className

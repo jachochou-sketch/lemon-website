@@ -17,7 +17,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
       <div className="flex flex-col gap-1.5">
         <label
           htmlFor={inputId}
-          className="text-sm font-semibold text-slate-700"
+          className="text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-600"
         >
           {label}
           {props.required && <span className="text-red-500 ml-0.5">*</span>}
@@ -27,9 +27,9 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
             ref={ref}
             id={inputId}
             className={cn(
-              'w-full px-4 py-2.5 rounded-lg border border-slate-300 bg-white text-slate-900',
-              'focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary',
-              'transition-colors duration-150 appearance-none cursor-pointer',
+              'min-h-11 w-full border border-slate-900/20 bg-white px-4 py-2.5 text-slate-900',
+              'focus:outline-none focus:ring-2 focus:ring-sky-700/15 focus:border-primary',
+              'transition-[border-color,box-shadow] duration-200 appearance-none cursor-pointer',
               'disabled:bg-slate-50 disabled:text-slate-500 disabled:cursor-not-allowed',
               error && 'border-red-400 focus:ring-red-400/30 focus:border-red-500',
               className

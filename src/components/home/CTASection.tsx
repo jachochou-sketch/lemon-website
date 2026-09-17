@@ -4,8 +4,9 @@ import Button from '@/components/ui/Button';
 
 export default function CTASection() {
   return (
-    <section className="bg-primary py-16 md:py-20">
-      <Container>
+    <section className="relative overflow-hidden bg-primary py-16 md:py-20">
+      <div className="water-lines !opacity-20" aria-hidden="true" />
+      <Container className="relative z-10">
         <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
           <div className="max-w-3xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">Start a conversation</p>
@@ -20,7 +21,7 @@ export default function CTASection() {
           <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Button href="/contact" variant="primary" size="lg">
               Send project details
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
             <Button
               href="mailto:jacho@lemonenviro.com"

@@ -79,7 +79,7 @@ export default function Header() {
                 className="hidden sm:inline-flex"
               >
                 Discuss a Project
-                <ArrowUpRight className="h-4 w-4" />
+                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </Button>
               <button
                 onClick={() => setIsMobileMenuOpen(true)}

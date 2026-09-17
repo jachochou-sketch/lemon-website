@@ -117,7 +117,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section id="milestones" className="section-padding bg-slate-50">
+      <section id="milestones" className="section-padding bg-[#edf6f7]">
         <Container>
           <SectionTitle
             title="Company Milestones"
@@ -180,7 +180,7 @@ export default function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section id="certifications" className="section-padding bg-slate-50">
+      <section id="certifications" className="section-padding bg-[#edf6f7]">
         <Container>
           <SectionTitle
             title="Certifications & Compliance"

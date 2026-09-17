@@ -32,7 +32,7 @@ export default function BlogGrid({
   }
 
   return (
-    <div className="grid gap-px border border-slate-900/10 bg-slate-900/10 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="reveal-on-scroll grid gap-px border border-slate-900/10 bg-slate-900/10 sm:grid-cols-2 lg:grid-cols-3">
       {posts.map((post) => (
         <BlogCard key={post.slug} post={post} />
       ))}

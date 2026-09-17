@@ -9,7 +9,7 @@ export default function FeaturedProducts() {
   const featuredProducts = getFeaturedProducts();
 
   return (
-    <section id="featured-products" className="section-padding bg-white">
+    <section id="featured-products" className="section-aqua section-padding">
       <Container>
         <SectionTitle
           title="Product platforms ready for your market"
@@ -17,7 +17,7 @@ export default function FeaturedProducts() {
           align="left"
         />
 
-        <div className="mt-12 grid gap-px border border-slate-900/10 bg-slate-900/10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="reveal-on-scroll mt-12 grid gap-px border border-slate-900/10 bg-slate-900/10 sm:grid-cols-2 lg:grid-cols-3">
           {featuredProducts.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
@@ -26,7 +26,7 @@ export default function FeaturedProducts() {
         <div className="mt-10">
           <Button href="/products" variant="outline" size="lg">
             View All Products
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Button>
         </div>
       </Container>

@@ -14,7 +14,7 @@ export default function BlogCard({ post }: BlogCardProps) {
   const readingTime = Math.max(1, Math.ceil(post.content.split(' ').length / 200));
 
   return (
-    <Card padding="none" className="group flex flex-col overflow-hidden">
+    <Card hover padding="none" className="group flex flex-col overflow-hidden">
       {/* Cover Image */}
       <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
         <Image
@@ -22,7 +22,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           alt={`${post.title} cover`}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover"
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.025]"
         />
       </div>
 

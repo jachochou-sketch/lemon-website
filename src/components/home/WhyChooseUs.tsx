@@ -26,9 +26,9 @@ const stages = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-padding section-rule bg-white">
+    <section className="section-padding section-rule bg-[#edf6f7]">
       <Container>
-        <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
+        <div className="reveal-on-scroll grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
           <div>
             <p className="eyebrow">How we work</p>
             <SectionTitle
@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
             {stages.map((stage) => (
               <div
                 key={stage.number}
-                className="grid gap-3 border-b border-slate-900/15 py-7 sm:grid-cols-[72px_0.75fr_1.25fr] sm:items-start"
+                className="grid gap-3 border-b border-slate-900/15 py-7 transition-colors duration-300 hover:bg-white/45 sm:grid-cols-[72px_0.75fr_1.25fr] sm:items-start sm:px-3"
               >
                 <span className="text-xs font-semibold tracking-[0.16em] text-accent-dark">{stage.number}</span>
                 <h3 className="text-xl font-semibold text-[#102725]">{stage.title}</h3>

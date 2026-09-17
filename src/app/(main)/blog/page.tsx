@@ -29,7 +29,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Listing */}
-      <section className="section-padding bg-[#f7f8f4]">
+      <section className="section-aqua section-padding">
         <Container>
           <Suspense fallback={<div className="h-96" aria-hidden="true" />}>
             <BlogListing />

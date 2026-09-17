@@ -35,6 +35,7 @@ export default function SectionTitle({
         <p
           className={cn(
             'text-base md:text-lg leading-relaxed max-w-2xl',
+            align === 'center' && 'mx-auto',
             light ? 'text-white/80' : 'text-slate-600'
           )}
         >

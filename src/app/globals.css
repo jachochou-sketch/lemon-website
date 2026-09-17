@@ -8,11 +8,19 @@
   }
 
   body {
-    @apply text-slate-700 bg-[#f7f8f4] antialiased;
+    @apply overflow-x-hidden bg-[#f4f8f7] text-slate-700 antialiased;
+  }
+
+  ::selection {
+    @apply bg-[#b9dce6] text-[#102725];
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading font-semibold text-[#102725] leading-tight tracking-[-0.025em];
+  }
+
+  h1, h2 {
+    text-wrap: balance;
   }
 
   h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
@@ -35,7 +43,53 @@
   }
 
   .page-hero {
-    @apply border-b border-slate-900/10 bg-[#eef2ea] py-14 md:py-20;
+    @apply relative overflow-hidden border-b border-slate-900/10 py-14 md:py-20;
+    background:
+      radial-gradient(circle at 88% 5%, rgba(100, 180, 205, 0.20), transparent 27%),
+      linear-gradient(115deg, #eef3ec 0%, #eef6f7 100%);
+  }
+
+  .page-hero::after {
+    content: '';
+    @apply pointer-events-none absolute -right-24 -top-40 h-[34rem] w-[34rem] rounded-full border border-sky-700/10;
+    box-shadow:
+      0 0 0 42px rgba(68, 151, 178, 0.035),
+      0 0 0 96px rgba(68, 151, 178, 0.025);
+  }
+
+  .page-hero > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .water-surface {
+    position: relative;
+    background:
+      radial-gradient(circle at 86% 18%, rgba(71, 158, 187, 0.16), transparent 24%),
+      linear-gradient(135deg, #f4f8f5 0%, #edf7f9 100%);
+  }
+
+  .water-lines {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.55;
+    background-image:
+      repeating-radial-gradient(
+        ellipse at 92% 15%,
+        transparent 0,
+        transparent 34px,
+        rgba(59, 143, 171, 0.12) 35px,
+        transparent 37px
+      );
+    -webkit-mask-image: linear-gradient(to left, #000 0%, transparent 68%);
+    mask-image: linear-gradient(to left, #000 0%, transparent 68%);
+  }
+
+  .section-aqua {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)),
+      linear-gradient(120deg, #dff1f4 0%, #eef5ef 100%);
   }
 
   .prose-custom {
@@ -64,5 +118,57 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes enter-up {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes enter-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .enter-up {
+    opacity: 0;
+    animation: enter-up 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .enter-fade {
+    opacity: 0;
+    animation: enter-fade 900ms ease-out forwards;
+  }
+
+  .delay-1 { animation-delay: 90ms; }
+  .delay-2 { animation-delay: 180ms; }
+  .delay-3 { animation-delay: 270ms; }
+  .delay-4 { animation-delay: 360ms; }
+
+  .page-hero .eyebrow,
+  .page-hero h1,
+  .page-hero h1 + p {
+    opacity: 0;
+    animation: enter-up 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .page-hero h1 { animation-delay: 80ms; }
+  .page-hero h1 + p { animation-delay: 160ms; }
+
+  @supports (animation-timeline: view()) {
+    .reveal-on-scroll {
+      opacity: 0;
+      animation: enter-up 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 28%;
+    }
   }
 }

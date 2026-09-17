@@ -70,7 +70,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form + Info */}
-      <section className="section-padding bg-[#f7f8f4]">
+      <section className="section-aqua section-padding">
         <Container>
           <div className="grid lg:grid-cols-3 gap-10">
             {/* Form */}
@@ -121,7 +121,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-slate-900 text-sm">
                         {method.label}
                       </h3>
-                      <p className="text-slate-600 text-sm mt-0.5 break-all">
+                      <p className="mt-0.5 break-words text-sm leading-5 text-slate-600">
                         {method.value}
                       </p>
                       <p className="text-xs text-slate-400 mt-1">
