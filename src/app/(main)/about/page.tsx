@@ -163,7 +163,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:mt-16 lg:gap-x-12 lg:gap-y-16">
+          <div className="mt-12 grid gap-x-7 gap-y-12 md:grid-cols-2 lg:mt-16 xl:grid-cols-4">
             {capabilityScenes.map((scene) => (
               <article key={scene.title}>
                 <div className="relative aspect-[3/2] overflow-hidden bg-[#edf6f7]">
@@ -172,13 +172,13 @@ export default function AboutPage() {
                     alt={scene.title}
                     fill
                     className="object-cover transition-transform duration-700 ease-out hover:scale-[1.025]"
-                    sizes="(min-width: 768px) 50vw, 100vw"
+                    sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
                   />
                 </div>
                 <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
                   {scene.eyebrow}
                 </p>
-                <h3 className="mt-2 text-xl font-semibold text-[#102725] md:text-2xl">
+                <h3 className="mt-2 text-xl font-semibold text-[#102725]">
                   {scene.title}
                 </h3>
                 <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 md:text-base md:leading-7">
