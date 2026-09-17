@@ -23,8 +23,8 @@ export default function HeroSection() {
               <span className="mt-2 block">Manufactured to your specification.</span>
             </h1>
             <p className="enter-up delay-2 mt-7 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
-              Lemon develops and manufactures RO and UF water purification systems,
-              replacement filters, and private-label programs for international partners.
+              Lemon develops and manufactures RO and UF systems for residential,
+              commercial, and private-label programs in international markets.
             </p>
 
             <div className="enter-up delay-3 mt-9 flex flex-col gap-3 sm:flex-row">
@@ -50,8 +50,8 @@ export default function HeroSection() {
           <div className="enter-fade delay-2 relative">
             <div className="relative aspect-[4/3] overflow-hidden border border-slate-900/10 bg-[#e4f1f3] shadow-[0_24px_70px_rgba(31,91,86,0.10)]">
               <Image
-                src="/images/products/odm-water-purifier-bom.jpg"
-                alt="Exploded view of a Lemon custom water purification system"
+                src="/images/cases/business-water-installations.jpg"
+                alt="Business and commercial water purification systems installed at customer sites"
                 fill
                 priority
                 sizes="(min-width: 1024px) 54vw, 100vw"
@@ -59,8 +59,8 @@ export default function HeroSection() {
               />
             </div>
             <div className="absolute bottom-0 left-0 border-r border-t border-slate-900/10 bg-white/95 px-5 py-4 backdrop-blur-sm">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-dark">OEM / ODM engineering</p>
-              <p className="mt-1 text-sm font-medium text-[#102725]">From component architecture to production</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-dark">Real installations</p>
+              <p className="mt-1 text-sm font-medium text-[#102725]">Residential · commercial · project applications</p>
             </div>
           </div>
         </div>

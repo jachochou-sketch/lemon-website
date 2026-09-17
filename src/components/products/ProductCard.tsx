@@ -6,19 +6,22 @@ import { Product } from '@/types';
 
 interface ProductCardProps {
   product: Product;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, imageSrc, imageAlt }: ProductCardProps) {
   const serviceOptions = product.serviceOptions ?? ['OEM', 'ODM'];
+  const displayImage = imageSrc ?? product.images[0];
 
   return (
     <Card hover padding="none" className="group flex h-full flex-col overflow-hidden">
       {/* Image */}
       <div className="relative aspect-[4/3] flex items-center justify-center overflow-hidden bg-[#eef2ef]">
-        {product.imageAvailable && product.images[0] ? (
+        {(imageSrc || product.imageAvailable) && displayImage ? (
           <Image
-            src={product.images[0]}
-            alt={`${product.name}${product.model ? ` (${product.model})` : ''}`}
+            src={displayImage}
+            alt={imageAlt ?? `${product.name}${product.model ? ` (${product.model})` : ''}`}
             fill
             sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.025]"
