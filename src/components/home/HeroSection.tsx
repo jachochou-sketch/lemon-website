@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ArrowRight, Check } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 
@@ -15,54 +15,62 @@ export default function HeroSection() {
     <section className="water-surface border-b border-slate-900/10">
       <div className="water-lines" aria-hidden="true" />
       <Container>
-        <div className="relative z-10 grid items-center gap-10 py-14 lg:min-h-[640px] lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-16">
-          <div className="flex flex-col justify-center lg:py-10">
-            <p className="eyebrow enter-up">Zhongshan, China · Water purification manufacturing</p>
-            <h1 className="enter-up delay-1 mt-7 max-w-3xl text-[2.75rem] font-semibold leading-[1.02] text-[#102725] sm:text-[3.5rem] lg:text-[3.35rem] xl:text-[3.65rem]">
+        <div className="relative z-10 grid items-center gap-10 py-10 sm:py-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12 lg:py-14 xl:gap-16">
+          <div className="min-w-0 lg:py-6">
+            <p className="eyebrow enter-up leading-5">Lemon Environmental · Since 2012</p>
+            <h1 className="enter-up delay-1 mt-6 max-w-xl text-[2.5rem] font-semibold leading-[1.08] text-[#102725] sm:text-[3.25rem] lg:text-[2.8rem] xl:text-[3.15rem]">
               <span className="block">Built for your market.</span>
-              <span className="mt-2 block">Manufactured to your specification.</span>
+              <span className="mt-3 block text-primary-light">Made to your specification.</span>
             </h1>
             <p className="enter-up delay-2 mt-7 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
               Lemon develops and manufactures RO and UF systems for residential,
               commercial, and private-label programs in international markets.
             </p>
 
-            <div className="enter-up delay-3 mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href="/products" variant="secondary" size="lg">
+            <div className="enter-up delay-3 mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+              <Button href="/products" variant="secondary" size="md">
                 View product range
                 <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button href="/contact" variant="outline" size="lg">
+              <Button href="/contact" variant="outline" size="md">
                 Discuss OEM / ODM
               </Button>
             </div>
 
-            <div className="enter-up delay-4 mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-slate-900/10 pt-6 text-sm text-slate-600">
-              {['RO & UF systems', 'Private label', 'Product development'].map((item) => (
-                <span key={item} className="flex items-center gap-2">
-                  <Check className="h-4 w-4 text-accent-dark" />
-                  {item}
-                </span>
-              ))}
+            <div className="enter-up delay-4 mt-8 border-t border-slate-900/10 pt-5">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">From development to production</p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">RO &amp; UF systems · Private label · OEM / ODM</p>
             </div>
           </div>
 
-          <div className="enter-fade delay-2 relative">
-            <div className="relative aspect-[4/3] overflow-hidden border border-slate-900/10 bg-[#e4f1f3] shadow-[0_24px_70px_rgba(31,91,86,0.10)]">
+          <figure className="enter-fade delay-2 min-w-0 border border-slate-900/10 bg-white">
+            <a
+              href="/images/about/enterprise-qualifications.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View enterprise qualifications image at full size (opens in a new tab)"
+              className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            >
               <Image
-                src="/images/cases/business-water-installations.jpg"
-                alt="Business and commercial water purification systems installed at customer sites"
-                fill
+                src="/images/about/enterprise-qualifications.png"
+                alt="Lemon enterprise qualifications and a collection of water purification patent certificates"
+                width={1192}
+                height={1072}
                 priority
-                sizes="(min-width: 1024px) 54vw, 100vw"
-                className="object-cover"
+                sizes="(min-width: 1280px) 662px, (min-width: 1024px) 55vw, 100vw"
+                className="h-auto w-full"
               />
-            </div>
-            <div className="absolute bottom-0 left-0 border-r border-t border-slate-900/10 bg-white/95 px-5 py-4 backdrop-blur-sm">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-dark">Real installations</p>
-              <p className="mt-1 text-sm font-medium text-[#102725]">Residential · commercial · project applications</p>
-            </div>
-          </div>
+            </a>
+            <figcaption className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-900/10 px-4 py-4 sm:px-6">
+              <div>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">Enterprise qualifications</p>
+                <p className="mt-1 text-sm text-slate-600">Water purification design &amp; innovation</p>
+              </div>
+              <a href="/images/about/enterprise-qualifications.png" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" aria-label="View full image (opens in a new tab)">
+                View full image <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+            </figcaption>
+          </figure>
         </div>
 
         <div className="relative z-10 grid grid-cols-2 border-t border-slate-900/10 sm:grid-cols-4">
