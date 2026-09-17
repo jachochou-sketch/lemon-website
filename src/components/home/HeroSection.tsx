@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
+import QualificationReveal from '@/components/home/QualificationReveal';
 
 const proofPoints = [
   ['2012', 'Founded'],
@@ -15,7 +16,7 @@ export default function HeroSection() {
     <section className="water-surface border-b border-slate-900/10">
       <div className="water-lines" aria-hidden="true" />
       <Container>
-        <div className="relative z-10 grid items-center gap-10 py-10 sm:py-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12 lg:py-14 xl:gap-16">
+        <div className="relative z-10 grid items-center gap-12 py-10 sm:py-14 lg:grid-cols-2 lg:gap-14 lg:py-16 xl:gap-20">
           <div className="min-w-0 lg:py-6">
             <p className="eyebrow enter-up leading-5">Lemon Environmental · Since 2012</p>
             <h1 className="enter-up delay-1 mt-6 max-w-xl text-[2.5rem] font-semibold leading-[1.08] text-[#102725] sm:text-[3.25rem] lg:text-[2.8rem] xl:text-[3.15rem]">
@@ -43,13 +44,13 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <figure className="enter-fade delay-2 min-w-0 border border-slate-900/10 bg-white">
+          <QualificationReveal>
             <a
               href="/images/about/enterprise-qualifications.png"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View enterprise qualifications image at full size (opens in a new tab)"
-              className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              className="qualification-image block overflow-hidden rounded-lg bg-white ring-1 ring-slate-900/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
             >
               <Image
                 src="/images/about/enterprise-qualifications.png"
@@ -57,11 +58,11 @@ export default function HeroSection() {
                 width={1192}
                 height={1072}
                 priority
-                sizes="(min-width: 1280px) 662px, (min-width: 1024px) 55vw, 100vw"
+                sizes="(min-width: 1280px) 486px, (min-width: 1024px) 44vw, (min-width: 640px) 486px, calc(100vw - 58px)"
                 className="h-auto w-full"
               />
             </a>
-            <figcaption className="flex flex-wrap items-center justify-between gap-3 border-t border-slate-900/10 px-4 py-4 sm:px-6">
+            <figcaption className="flex flex-wrap items-center justify-between gap-3 px-1 pb-1 pt-4 sm:px-2 sm:pt-5">
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">Enterprise qualifications</p>
                 <p className="mt-1 text-sm text-slate-600">Water purification design &amp; innovation</p>
@@ -70,7 +71,7 @@ export default function HeroSection() {
                 View full image <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </a>
             </figcaption>
-          </figure>
+          </QualificationReveal>
         </div>
 
         <div className="relative z-10 grid grid-cols-2 border-t border-slate-900/10 sm:grid-cols-4">
