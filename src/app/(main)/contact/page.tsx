@@ -54,22 +54,23 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-primary py-16 md:py-20">
+      <section className="page-hero">
         <Container>
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Get in Touch
+            <p className="eyebrow">Project enquiry</p>
+            <h1 className="mt-5 text-4xl font-semibold text-[#102725] md:text-6xl">
+              Tell us what you need to build
             </h1>
-            <p className="text-lg text-white/70 leading-relaxed">
-              Ready to discuss your project? Fill out the form below and our team
-              will review your requirements and reply within one business day.
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Share your market, product format, filtration requirements, and expected
+              volume. Our team will review the brief and reply within one business day.
             </p>
           </div>
         </Container>
       </section>
 
       {/* Contact Form + Info */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-[#f7f8f4]">
         <Container>
           <div className="grid lg:grid-cols-3 gap-10">
             {/* Form */}

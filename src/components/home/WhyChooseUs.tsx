@@ -1,77 +1,56 @@
-import {
-  Droplets,
-  ShieldCheck,
-  Truck,
-  MessageSquareText,
-  Wrench,
-  BadgeCheck,
-} from 'lucide-react';
 import Container from '@/components/ui/Container';
 import SectionTitle from '@/components/ui/SectionTitle';
-import Card from '@/components/ui/Card';
 
-const reasons = [
+const stages = [
   {
-    icon: Droplets,
-    title: 'Water-Treatment Focus',
-    description:
-      'Dedicated assembly, filter production, and water-quality testing capabilities support residential and commercial purifier programs.',
+    number: '01',
+    title: 'Define the brief',
+    description: 'Target market, water conditions, certification route, volume, and commercial goals.',
   },
   {
-    icon: ShieldCheck,
-    title: 'Quality at Every Stage',
-    description:
-      'Incoming materials, filtration performance, pressure, leakage, and finished-product checks are built into the production process.',
+    number: '02',
+    title: 'Engineer the system',
+    description: 'Filtration configuration, housing, controls, interfaces, branding, and packaging.',
   },
   {
-    icon: Wrench,
-    title: 'Flexible ODM & OEM',
-    description:
-      'Choose an existing platform or develop a tailored solution covering filtration, housing, controls, branding, and packaging.',
+    number: '03',
+    title: 'Validate the product',
+    description: 'Samples and agreed checks for filtration, pressure, leakage, assembly, and finish.',
   },
   {
-    icon: Truck,
-    title: 'Export Project Support',
-    description:
-      'We coordinate production documentation, packaging, and international shipping requirements for your target market.',
-  },
-  {
-    icon: MessageSquareText,
-    title: 'Responsive Communication',
-    description:
-      'A dedicated project contact keeps specifications, samples, revisions, and production milestones clear from inquiry to delivery.',
-  },
-  {
-    icon: BadgeCheck,
-    title: 'Market-Ready Documentation',
-    description:
-      'Available quality records and product documentation help customers prepare for applicable testing and certification requirements.',
+    number: '04',
+    title: 'Move into production',
+    description: 'Material control, manufacturing milestones, inspection records, packing, and shipment.',
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding section-rule bg-white">
       <Container>
-        <SectionTitle
-          title="Why Choose Lemon?"
-          subtitle="A focused water-purification partner for product development, manufacturing, quality control, and export coordination."
-        />
+        <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
+          <div>
+            <p className="eyebrow">How we work</p>
+            <SectionTitle
+              title="A practical route from brief to shipment"
+              subtitle="Clear decisions, documented checkpoints, and one project contact throughout development and production."
+              align="left"
+              className="mt-5"
+            />
+          </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-          {reasons.map((reason) => (
-            <Card key={reason.title} hover padding="lg">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                <reason.icon className="w-6 h-6 text-primary" />
+          <div className="border-t border-slate-900/15">
+            {stages.map((stage) => (
+              <div
+                key={stage.number}
+                className="grid gap-3 border-b border-slate-900/15 py-7 sm:grid-cols-[72px_0.75fr_1.25fr] sm:items-start"
+              >
+                <span className="text-xs font-semibold tracking-[0.16em] text-accent-dark">{stage.number}</span>
+                <h3 className="text-xl font-semibold text-[#102725]">{stage.title}</h3>
+                <p className="text-sm leading-6 text-slate-600">{stage.description}</p>
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">
-                {reason.title}
-              </h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
-                {reason.description}
-              </p>
-            </Card>
-          ))}
+            ))}
+          </div>
         </div>
       </Container>
     </section>

@@ -1,42 +1,35 @@
-import { ArrowRight, Send } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 
 export default function CTASection() {
   return (
-    <section className="relative py-20 md:py-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-primary" />
-
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-accent/20 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
-
-      <Container className="relative z-10 text-center">
-        <div className="max-w-2xl mx-auto">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-accent/20 mb-6">
-            <Send className="w-8 h-8 text-accent" />
+    <section className="bg-primary py-16 md:py-20">
+      <Container>
+        <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
+          <div className="max-w-3xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent-light">Start a conversation</p>
+            <h2 className="mt-5 text-3xl font-semibold leading-tight text-white md:text-5xl">
+              Bring us the product brief. We will help define the manufacturing route.
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-7 text-white/65">
+              Share your target market, filtration requirements, expected quantity,
+              and launch timing. Our team replies within one business day.
+            </p>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Ready to Start Your Next Project?
-          </h2>
-          <p className="text-lg text-white/70 leading-relaxed mb-10">
-            Tell us your target market, filtration requirements, expected order
-            quantity, and launch timeline. We will review the project and reply
-            within one business day.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
             <Button href="/contact" variant="primary" size="lg">
-              Request a Quote
-              <ArrowRight className="w-5 h-5" />
+              Send project details
+              <ArrowRight className="h-4 w-4" />
             </Button>
             <Button
               href="mailto:jacho@lemonenviro.com"
               variant="outline"
               size="lg"
-              className="!border-white/30 !text-white hover:!bg-white hover:!text-primary"
+              className="!border-white/35 !text-white hover:!bg-white hover:!text-primary"
             >
-              Email Us Directly
+              <Mail className="h-4 w-4" />
+              jacho@lemonenviro.com
             </Button>
           </div>
         </div>

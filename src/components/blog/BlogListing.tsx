@@ -11,7 +11,7 @@ export default function BlogListing() {
 
   return (
     <>
-      <div className="flex flex-wrap gap-2 mb-10">
+      <div className="mb-10 flex flex-wrap border-b border-slate-900/15">
         {blogCategories.map((category) => (
           <a
             key={category}
@@ -20,10 +20,10 @@ export default function BlogListing() {
                 ? '/blog'
                 : `/blog?category=${encodeURIComponent(category)}`
             }
-            className={`px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+            className={`-mb-px border-b-2 px-5 py-3 text-sm font-medium transition-colors ${
               category === activeCategory
-                ? 'bg-primary text-white shadow-lg shadow-primary/25'
-                : 'bg-white text-slate-600 border border-slate-200 hover:border-primary/30 hover:text-primary'
+                ? 'border-primary text-primary'
+                : 'border-transparent text-slate-500 hover:text-primary'
             }`}
           >
             {category}

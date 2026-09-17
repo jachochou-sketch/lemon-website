@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu } from 'lucide-react';
+import { ArrowUpRight, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { navLinks } from '@/data/navigation';
 import Container from '@/components/ui/Container';
@@ -28,37 +28,41 @@ export default function Header() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-30 transition-all duration-300',
+          'fixed top-0 left-0 right-0 z-30 border-b transition-colors duration-200',
           isScrolled
-            ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-slate-200'
-            : 'bg-white border-b border-transparent'
+            ? 'bg-[#f7f8f4]/95 backdrop-blur-md border-slate-900/10'
+            : 'bg-[#f7f8f4] border-slate-900/10'
         )}
       >
         <Container>
-          <div className="flex items-center justify-between h-16 lg:h-20">
+          <div className="flex items-center justify-between h-[72px] lg:h-[84px]">
             {/* Logo */}
-            <Link href="/" className="flex items-center group" aria-label="Lemon Environmental Technology home">
+            <Link href="/" className="flex items-center gap-3" aria-label="Lemon Environmental Technology home">
               <Image
                 src="/images/brand/lemon-logo-concept-v2-transparent.png"
                 alt="Lemon Environmental Technology"
                 width={1309}
                 height={1201}
                 priority
-                className="w-12 h-12 lg:w-14 lg:h-14 object-contain transition-transform duration-200 group-hover:scale-105"
+                className="w-11 h-11 lg:w-12 lg:h-12 object-contain"
               />
+              <span className="hidden sm:block leading-none">
+                <span className="block text-[15px] font-semibold tracking-[-0.02em] text-[#102725]">Lemon Environmental</span>
+                <span className="mt-1 block text-[9px] font-medium uppercase tracking-[0.18em] text-slate-500">Water purification manufacturing</span>
+              </span>
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-7">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    'px-4 py-2 rounded-lg text-sm font-medium transition-colors',
+                    'relative py-2 text-sm font-medium transition-colors after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-left after:bg-primary after:transition-transform',
                     pathname === link.href
-                      ? 'bg-primary/10 text-primary'
-                      : 'text-slate-600 hover:text-primary hover:bg-slate-50'
+                      ? 'text-primary after:scale-x-100'
+                      : 'text-slate-600 hover:text-primary after:scale-x-0'
                   )}
                 >
                   {link.label}
@@ -74,11 +78,12 @@ export default function Header() {
                 size="sm"
                 className="hidden sm:inline-flex"
               >
-                Get a Quote
+                Discuss a Project
+                <ArrowUpRight className="h-4 w-4" />
               </Button>
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="p-2 rounded-lg hover:bg-slate-100 transition-colors lg:hidden"
+                className="border border-slate-900/15 p-2.5 transition-colors hover:border-primary lg:hidden"
                 aria-label="Open menu"
               >
                 <Menu className="w-5 h-5 text-slate-700" />
@@ -89,7 +94,7 @@ export default function Header() {
       </header>
 
       {/* Spacer to prevent content from hiding behind fixed header */}
-      <div className="h-16 lg:h-20" />
+      <div className="h-[72px] lg:h-[84px]" />
 
       <MobileMenu
         isOpen={isMobileMenuOpen}

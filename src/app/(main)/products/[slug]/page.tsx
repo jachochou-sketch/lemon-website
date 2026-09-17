@@ -53,11 +53,11 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
   return (
     <>
       {/* Breadcrumb + Header */}
-      <section className="bg-gradient-primary pt-8 pb-16">
+      <section className="border-b border-slate-900/10 bg-[#eef2ea] pb-16 pt-8">
         <Container>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-6"
+            className="mb-8 inline-flex items-center gap-2 text-sm text-slate-500 transition-colors hover:text-primary"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to All Products
@@ -66,7 +66,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
           <div className="grid lg:grid-cols-2 gap-10">
             {/* Image Gallery */}
             <div>
-              <div className="relative aspect-[4/3] rounded-2xl bg-white overflow-hidden shadow-2xl shadow-black/20">
+              <div className="relative aspect-[4/3] overflow-hidden border border-slate-900/10 bg-white">
                 {product.imageAvailable && product.images[0] ? (
                   <Image
                     src={product.images[0]}
@@ -104,49 +104,49 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
             {/* Product Info */}
             <div>
-              <Badge variant="accent" className="mb-3">
+              <Badge variant="primary" className="mb-4">
                 {product.category}
               </Badge>
-              <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h1 className="mb-4 text-3xl font-semibold text-[#102725] md:text-5xl">
                 {product.name}
               </h1>
               {product.model && (
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-accent mb-4">
+                <p className="mb-4 text-sm font-semibold uppercase tracking-[0.16em] text-primary">
                   Model {product.model}
                 </p>
               )}
-              <p className="text-white/70 leading-relaxed mb-6">
+              <p className="mb-7 leading-7 text-slate-600">
                 {product.summary}
               </p>
 
               {/* Quick Info Cards */}
               <div className="grid grid-cols-2 gap-3 mb-8">
-                <div className="flex items-center gap-3 bg-white/10 rounded-lg px-4 py-3">
-                  <ShoppingCart className="w-5 h-5 text-accent flex-shrink-0" />
+                <div className="flex items-center gap-3 border border-slate-900/10 bg-white px-4 py-3">
+                  <ShoppingCart className="w-5 h-5 text-accent-dark flex-shrink-0" />
                   <div>
-                    <div className="text-xs text-white/50">Min Order</div>
-                    <div className="text-sm font-semibold text-white">{product.minOrder}</div>
+                    <div className="text-xs text-slate-400">Min Order</div>
+                    <div className="text-sm font-semibold text-[#102725]">{product.minOrder}</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 bg-white/10 rounded-lg px-4 py-3">
-                  <Package className="w-5 h-5 text-accent flex-shrink-0" />
+                <div className="flex items-center gap-3 border border-slate-900/10 bg-white px-4 py-3">
+                  <Package className="w-5 h-5 text-accent-dark flex-shrink-0" />
                   <div>
-                    <div className="text-xs text-white/50">Supply Ability</div>
-                    <div className="text-sm font-semibold text-white">{product.supplyAbility}</div>
+                    <div className="text-xs text-slate-400">Supply Ability</div>
+                    <div className="text-sm font-semibold text-[#102725]">{product.supplyAbility}</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 bg-white/10 rounded-lg px-4 py-3">
-                  <Clock className="w-5 h-5 text-accent flex-shrink-0" />
+                <div className="flex items-center gap-3 border border-slate-900/10 bg-white px-4 py-3">
+                  <Clock className="w-5 h-5 text-accent-dark flex-shrink-0" />
                   <div>
-                    <div className="text-xs text-white/50">Delivery Time</div>
-                    <div className="text-sm font-semibold text-white">{product.deliveryTime}</div>
+                    <div className="text-xs text-slate-400">Delivery Time</div>
+                    <div className="text-sm font-semibold text-[#102725]">{product.deliveryTime}</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-3 bg-white/10 rounded-lg px-4 py-3">
-                  <Shield className="w-5 h-5 text-accent flex-shrink-0" />
+                <div className="flex items-center gap-3 border border-slate-900/10 bg-white px-4 py-3">
+                  <Shield className="w-5 h-5 text-accent-dark flex-shrink-0" />
                   <div>
-                    <div className="text-xs text-white/50">Certifications</div>
-                    <div className="text-sm font-semibold text-white">
+                    <div className="text-xs text-slate-400">Certifications</div>
+                    <div className="text-sm font-semibold text-[#102725]">
                       {product.certifications.length > 0
                         ? product.certifications.join(', ')
                         : 'Target-market support available'}
@@ -215,7 +215,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
             {/* Specifications Sidebar */}
             <div>
-              <div className="bg-slate-50 rounded-xl p-6 sticky top-24">
+              <div className="sticky top-24 border border-slate-900/10 bg-[#f0f2ec] p-6">
                 <h3 className="text-lg font-bold text-slate-900 mb-4">
                   Technical Specifications
                 </h3>
@@ -237,7 +237,7 @@ export default function ProductDetailPage({ params }: ProductDetailPageProps) {
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
-        <section className="section-padding bg-slate-50">
+        <section className="section-padding bg-[#f0f2ec]">
           <Container>
             <div className="text-center mb-10">
               <h2 className="text-2xl font-bold text-slate-900 mb-2">

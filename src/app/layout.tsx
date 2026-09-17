@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: '%s | Lemon Environmental Technology',
   },
   description:
-    'Leading water purifier ODM/OEM manufacturer. RO systems, UF purifiers, UV sterilizers, replacement filters, and custom water treatment solutions. ISO 9001 & NSF certified. Serving 40+ countries.',
+    'Water purifier ODM/OEM manufacturer in Zhongshan, China. RO systems, UF purifiers, replacement filters, and custom product development for international partners.',
   keywords: [
     'water purifier OEM',
     'water purifier ODM',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'Lemon Environmental Technology',
     title: 'Lemon Environmental Technology — Water Purifier ODM & OEM Manufacturer',
     description:
-      'Custom water purifier manufacturing for global brands. RO, UF, UV systems. ISO 9001 & NSF certified.',
+      'RO and UF water purification systems, replacement filters, and custom manufacturing programs from Zhongshan, China.',
   },
 };
 

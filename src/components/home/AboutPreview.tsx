@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Shield, Factory, Globe, Users } from 'lucide-react';
 import Container from '@/components/ui/Container';
@@ -20,7 +19,7 @@ const highlights = [
   {
     icon: Shield,
     label: 'Certified',
-    value: 'ISO 9001, CE, SGS',
+    value: 'ISO 9001, CE',
   },
   {
     icon: Globe,
@@ -31,44 +30,41 @@ const highlights = [
 
 export default function AboutPreview() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding section-rule bg-[#f0f2ec]">
       <Container>
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.12fr_0.88fr] lg:gap-20">
           {/* Image Column */}
           <div className="relative">
-            <div className="aspect-[16/10] rounded-2xl overflow-hidden shadow-lg relative">
+            <div className="relative aspect-[16/10] overflow-hidden border border-slate-900/10 bg-white">
               <Image
                 src="/images/about/factory.jpg"
                 alt="Lemon Water Technology - 10,000 m² Manufacturing Facility in Zhongshan"
                 fill
-                className="object-contain bg-slate-100"
+                className="object-contain"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            {/* Experience badge */}
-            <div className="absolute -bottom-6 -left-6 bg-accent text-white rounded-xl px-6 py-4 shadow-xl">
-              <div className="text-3xl font-bold leading-tight">
-                {new Date().getFullYear() - companyInfo.founded}
-              </div>
-              <div className="text-sm font-medium text-white/80">Years in Business</div>
+            <div className="absolute bottom-0 left-0 bg-primary px-5 py-4 text-white">
+              <div className="text-2xl font-semibold leading-tight">Since {companyInfo.founded}</div>
+              <div className="mt-1 text-[10px] uppercase tracking-[0.14em] text-white/60">Zhongshan manufacturing base</div>
             </div>
           </div>
 
           {/* Text Column */}
           <div>
             <SectionTitle
-              title="Water Purification Excellence Since 2012"
-              subtitle="From a small workshop to a 10,000 m² ISO-certified facility in Zhongshan, we've been delivering custom water purification solutions to brands across 10+ countries for over 14 years."
+              title="One team from product brief to production"
+              subtitle="Our Zhongshan facility brings product development, filter assembly, testing, packaging, and export coordination into one working process."
               align="left"
             />
 
-            <div className="grid grid-cols-2 gap-4 mt-8">
+            <div className="mt-9 grid grid-cols-2 border-y border-slate-900/10">
               {highlights.map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors"
+                  className="flex items-start gap-3 border-b border-slate-900/10 py-4 odd:border-r"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center border border-primary/20">
                     <item.icon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
@@ -79,11 +75,7 @@ export default function AboutPreview() {
               ))}
             </div>
 
-            <p className="text-slate-600 leading-relaxed mt-6">
-              {companyInfo.description.slice(0, 200)}...
-            </p>
-
-            <div className="mt-6">
+            <div className="mt-8">
               <Button href="/about" variant="outline">
                 Learn More About Us
                 <ArrowRight className="w-4 h-4" />

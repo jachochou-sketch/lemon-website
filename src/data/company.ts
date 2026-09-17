@@ -3,20 +3,19 @@ import { CompanyInfo } from '@/types';
 export const companyInfo: CompanyInfo = {
   name: 'Lemon Environmental Technology Co., Ltd.',
   shortName: 'Lemon',
-  tagline: 'Your Trusted Partner in Water Purifier ODM & OEM Manufacturing',
-  description: `Lemon Environmental Technology Co., Ltd. (柠檬环境科技有限公司) is a premier water purifier manufacturer specializing in
-ODM (Original Design Manufacturing) and OEM (Original Equipment Manufacturing) services for global brands.
-With over 14 years of experience, we design, engineer, and produce high-quality water purification systems
-for residential, commercial, and industrial applications.
+  tagline: 'Water Purifier ODM & OEM Manufacturing in Zhongshan',
+  description: `Lemon Environmental Technology Co., Ltd. (柠檬环境科技有限公司) develops and manufactures
+water purification products for brands, distributors, and project partners. Our work covers existing-product
+OEM programs and ODM development for residential and commercial applications.
 
 Our 10,000 m² ISO-certified facility houses advanced RO membrane production lines, filter assembly
 workshops, injection molding for housings, and a dedicated water quality testing laboratory.
-We offer complete turnkey solutions — from product design, mold development, and prototyping
+Our project scope can cover product design, mold development, and prototyping
 to mass production, packaging design, and international logistics.
 
 We serve brands across 10+ countries, providing customized RO systems, UF purifiers, UV sterilizers,
-water softeners, and replacement filter cartridges. Every product undergoes rigorous testing to meet
-NSF, CE, RoHS, and ISO 9001 standards.`,
+water softeners, and replacement filter cartridges. Inspection and documentation are agreed according
+to the product specification and the requirements of each target market.`,
 
   founded: 2012,
   employees: '100+',

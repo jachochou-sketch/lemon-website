@@ -12,19 +12,19 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<string, string> = {
   primary:
-    'bg-accent text-white hover:bg-accent-light active:bg-accent-dark shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 transition-all',
+    'border border-accent bg-accent text-white hover:border-accent-dark hover:bg-accent-dark transition-colors',
   secondary:
-    'bg-primary text-white hover:bg-primary-light active:bg-primary-dark shadow-lg shadow-primary/25 hover:shadow-xl transition-all',
+    'border border-primary bg-primary text-white hover:bg-primary-light transition-colors',
   outline:
-    'border-2 border-primary text-primary hover:bg-primary hover:text-white active:bg-primary-dark transition-all',
+    'border border-primary/50 bg-transparent text-primary hover:border-primary hover:bg-primary hover:text-white transition-colors',
   ghost:
-    'text-primary hover:bg-slate-100 active:bg-slate-200 transition-all',
+    'text-primary hover:bg-primary/5 transition-colors',
 };
 
 const sizeStyles: Record<string, string> = {
-  sm: 'px-4 py-2 text-sm rounded-md gap-1.5',
-  md: 'px-6 py-3 text-base rounded-lg gap-2',
-  lg: 'px-8 py-4 text-lg rounded-lg gap-2.5',
+  sm: 'px-4 py-2.5 text-sm gap-1.5',
+  md: 'px-6 py-3 text-sm gap-2',
+  lg: 'px-7 py-3.5 text-base gap-2.5',
 };
 
 export default function Button({
@@ -38,7 +38,7 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const styles = cn(
-    'inline-flex items-center justify-center font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
+    'inline-flex items-center justify-center font-semibold tracking-[-0.01em] focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed',
     variantStyles[variant],
     sizeStyles[size],
     className

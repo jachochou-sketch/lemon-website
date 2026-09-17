@@ -18,14 +18,14 @@ export default function SectionTitle({
   return (
     <div
       className={cn(
-        'max-w-2xl',
+        'max-w-3xl',
         align === 'center' && 'mx-auto text-center',
         className
       )}
     >
       <h2
         className={cn(
-          'text-3xl md:text-4xl font-bold mb-4',
+          'text-3xl md:text-[2.75rem] font-semibold mb-5 leading-[1.05]',
           light ? 'text-white' : 'text-slate-900'
         )}
       >
@@ -34,7 +34,7 @@ export default function SectionTitle({
       {subtitle && (
         <p
           className={cn(
-            'text-lg leading-relaxed',
+            'text-base md:text-lg leading-relaxed max-w-2xl',
             light ? 'text-white/80' : 'text-slate-600'
           )}
         >

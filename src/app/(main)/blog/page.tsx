@@ -13,13 +13,14 @@ export default function BlogPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-primary py-16 md:py-20">
+      <section className="page-hero">
         <Container>
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Blog &amp; Resources
+            <p className="eyebrow">Technical notes</p>
+            <h1 className="mt-5 text-4xl font-semibold text-[#102725] md:text-6xl">
+              Water treatment knowledge for product teams
             </h1>
-            <p className="text-lg text-white/70 leading-relaxed">
+            <p className="mt-6 text-lg leading-8 text-slate-600">
               Practical insights on water purification, filtration technology,
               product development, quality control, and international market preparation.
             </p>
@@ -28,7 +29,7 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Listing */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-[#f7f8f4]">
         <Container>
           <Suspense fallback={<div className="h-96" aria-hidden="true" />}>
             <BlogListing />

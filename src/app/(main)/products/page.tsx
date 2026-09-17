@@ -13,23 +13,23 @@ export default function ProductsPage() {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-primary py-16 md:py-20">
+      <section className="page-hero">
         <Container>
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Our Products
+            <p className="eyebrow">Product catalogue</p>
+            <h1 className="mt-5 text-4xl font-semibold text-[#102725] md:text-6xl">
+              Water purification platforms and components
             </h1>
-            <p className="text-lg text-white/70 leading-relaxed">
-              We are an <strong className="text-white">R&D-driven ODM manufacturer</strong>,
-              specializing in customized water purification solutions — from concept
-              design to finished product, tailored to your brand and market needs.
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Production-ready RO and UF systems, replacement filters, and custom
+              development programs for private-label customers.
             </p>
           </div>
         </Container>
       </section>
 
       {/* Products */}
-      <section className="section-padding bg-slate-50">
+      <section className="section-padding bg-[#f7f8f4]">
         <Container>
           <Suspense fallback={<div className="h-96" aria-hidden="true" />}>
             <ProductListing />

@@ -51,11 +51,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <>
       {/* Header */}
-      <section className="bg-gradient-primary pt-8 pb-16">
+      <section className="border-b border-slate-900/10 bg-[#eef2ea] pb-16 pt-8">
         <Container>
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors mb-6"
+            className="mb-8 inline-flex items-center gap-2 text-sm text-slate-500 transition-colors hover:text-primary"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Blog
@@ -63,22 +63,22 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
-              <Badge variant="accent">{post.category}</Badge>
-              <span className="text-white/60 text-sm flex items-center gap-1">
+              <Badge variant="primary">{post.category}</Badge>
+              <span className="flex items-center gap-1 text-sm text-slate-500">
                 <Clock className="w-3.5 h-3.5" />
                 {readingTime} min read
               </span>
             </div>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h1 className="mb-4 text-3xl font-semibold text-[#102725] md:text-4xl lg:text-5xl">
               {post.title}
             </h1>
 
-            <p className="text-lg text-white/70 leading-relaxed mb-6">
+            <p className="mb-6 text-lg leading-relaxed text-slate-600">
               {post.excerpt}
             </p>
 
-            <div className="flex flex-wrap items-center gap-5 text-sm text-white/60">
+            <div className="flex flex-wrap items-center gap-5 text-sm text-slate-500">
               <span className="flex items-center gap-1.5">
                 <User className="w-4 h-4" />
                 {post.author}
@@ -99,7 +99,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Article Cover */}
       <section className="relative z-10 -mt-8">
         <Container>
-          <div className="relative mx-auto aspect-[16/9] max-w-5xl overflow-hidden rounded-2xl bg-slate-100 shadow-2xl shadow-slate-900/20">
+          <div className="relative mx-auto aspect-[16/9] max-w-5xl overflow-hidden border border-slate-900/10 bg-slate-100">
             <Image
               src={post.coverImage}
               alt={`${post.title} cover`}
@@ -186,7 +186,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full text-sm"
+                    className="border border-slate-900/10 bg-slate-100 px-3 py-1.5 text-sm text-slate-600"
                   >
                     #{tag}
                   </span>

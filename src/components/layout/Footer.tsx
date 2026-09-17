@@ -4,9 +4,8 @@ import {
   Mail,
   Phone,
   MapPin,
-  Clock,
   Linkedin,
-  ChevronRight,
+  ArrowUpRight,
 } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import { companyInfo } from '@/data/company';
@@ -16,14 +15,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-slate-300 pt-16 pb-8">
+    <footer className="border-t border-white/10 bg-[#0c2927] text-white">
       <Container>
-        {/* Main Footer */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Company Info */}
-          <div>
-            <Link href="/" className="inline-flex mb-4" aria-label="Lemon Environmental Technology home">
-              <div className="w-16 h-16 rounded-xl bg-white p-1.5 shadow-sm">
+        <div className="grid gap-12 py-14 lg:grid-cols-[1.25fr_0.75fr_0.75fr_1.2fr] lg:gap-10 lg:py-20">
+          <div className="max-w-sm">
+            <Link href="/" className="inline-flex items-center gap-3" aria-label="Lemon Environmental Technology home">
+              <div className="h-14 w-14 bg-white p-1.5">
                 <Image
                   src="/images/brand/lemon-logo-concept-v2-transparent.png"
                   alt="Lemon Environmental Technology"
@@ -32,26 +29,23 @@ export default function Footer() {
                   className="w-full h-full object-contain"
                 />
               </div>
+              <span className="text-base font-semibold">Lemon Environmental</span>
             </Link>
-            <p className="text-sm leading-relaxed text-slate-400 mb-4">
-              {companyInfo.tagline}
-            </p>
-            <p className="text-xs leading-relaxed text-slate-500">
-              ODM &amp; OEM water purification solutions for international brands and distributors.
+            <p className="mt-6 text-sm leading-6 text-white/60">
+              Water purification systems developed and manufactured for brands,
+              distributors, and project partners worldwide.
             </p>
           </div>
 
-          {/* Products Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Products</h4>
-            <ul className="space-y-2.5">
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Products</h4>
+            <ul className="mt-5 space-y-3">
               {footerLinks.products.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 text-sm text-slate-400 hover:text-accent transition-colors group"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                   >
-                    <ChevronRight className="w-3 h-3 opacity-0 -ml-3 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                     {link.label}
                   </Link>
                 </li>
@@ -59,17 +53,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
-            <ul className="space-y-2.5">
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Company</h4>
+            <ul className="mt-5 space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="flex items-center gap-1 text-sm text-slate-400 hover:text-accent transition-colors group"
+                    className="text-sm text-white/70 transition-colors hover:text-white"
                   >
-                    <ChevronRight className="w-3 h-3 opacity-0 -ml-3 group-hover:opacity-100 group-hover:ml-0 transition-all" />
                     {link.label}
                   </Link>
                 </li>
@@ -77,29 +69,28 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-3">
-              <li className="flex gap-3 text-sm text-slate-400">
-                <MapPin className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+            <h4 className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/45">Contact</h4>
+            <ul className="mt-5 space-y-4">
+              <li className="flex gap-3 text-sm leading-6 text-white/60">
+                <MapPin className="mt-1 h-4 w-4 flex-shrink-0 text-accent" />
                 {companyInfo.contact.address}
               </li>
               <li>
                 <a
                   href={`tel:${companyInfo.contact.phone}`}
-                  className="flex gap-3 text-sm text-slate-400 hover:text-accent transition-colors"
+                  className="flex gap-3 text-sm text-white/70 transition-colors hover:text-white"
                 >
-                  <Phone className="w-4 h-4 text-accent flex-shrink-0" />
+                  <Phone className="h-4 w-4 flex-shrink-0 text-accent" />
                   {companyInfo.contact.phone}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${companyInfo.contact.email}`}
-                  className="flex gap-3 text-sm text-slate-400 hover:text-accent transition-colors"
+                  className="flex gap-3 text-sm text-white/70 transition-colors hover:text-white"
                 >
-                  <Mail className="w-4 h-4 text-accent flex-shrink-0" />
+                  <Mail className="h-4 w-4 flex-shrink-0 text-accent" />
                   {companyInfo.contact.email}
                 </a>
               </li>
@@ -108,31 +99,27 @@ export default function Footer() {
                   href={companyInfo.contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex gap-3 text-sm text-slate-400 hover:text-accent transition-colors"
+                  className="flex items-center gap-3 text-sm text-white/70 transition-colors hover:text-white"
                   aria-label="Jacho Chou on LinkedIn (opens in a new tab)"
                 >
-                  <Linkedin className="w-4 h-4 text-accent flex-shrink-0" />
-                  LinkedIn — Jacho Chou
+                  <Linkedin className="h-4 w-4 flex-shrink-0 text-accent" />
+                  LinkedIn
+                  <ArrowUpRight className="h-3.5 w-3.5" />
                 </a>
-              </li>
-              <li className="flex gap-3 text-sm text-slate-400">
-                <Clock className="w-4 h-4 text-accent flex-shrink-0" />
-                {companyInfo.contact.workingHours}
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-500">
+        <div className="flex flex-col gap-4 border-t border-white/10 py-7 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
+          <p>
             &copy; {currentYear} {companyInfo.name}. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-slate-500">
-            <Link href="/privacy" className="hover:text-slate-300 transition-colors">
+          <div className="flex gap-6">
+            <Link href="/privacy" className="transition-colors hover:text-white/80">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-slate-300 transition-colors">
+            <Link href="/terms" className="transition-colors hover:text-white/80">
               Terms of Service
             </Link>
           </div>

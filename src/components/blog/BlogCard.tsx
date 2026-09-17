@@ -2,7 +2,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Calendar, User, Clock } from 'lucide-react';
 import Card from '@/components/ui/Card';
-import Badge from '@/components/ui/Badge';
 import { BlogPost } from '@/types';
 import { formatDate } from '@/lib/utils';
 
@@ -15,7 +14,7 @@ export default function BlogCard({ post }: BlogCardProps) {
   const readingTime = Math.max(1, Math.ceil(post.content.split(' ').length / 200));
 
   return (
-    <Card hover padding="none" className="group flex flex-col overflow-hidden">
+    <Card padding="none" className="group flex flex-col overflow-hidden">
       {/* Cover Image */}
       <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
         <Image
@@ -23,21 +22,21 @@ export default function BlogCard({ post }: BlogCardProps) {
           alt={`${post.title} cover`}
           fill
           sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover"
         />
       </div>
 
       {/* Content */}
-      <div className="p-5 flex flex-col flex-1">
-        <div className="flex items-center gap-2 mb-3">
-          <Badge variant="primary">{post.category}</Badge>
+      <div className="flex flex-1 flex-col p-6">
+        <div className="mb-4 flex items-center justify-between gap-2">
+          <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">{post.category}</span>
           <span className="text-xs text-slate-400 flex items-center gap-1">
             <Clock className="w-3 h-3" />
             {readingTime} min read
           </span>
         </div>
 
-        <h3 className="text-lg font-bold text-slate-900 mb-2 line-clamp-2 hover:text-primary transition-colors">
+        <h3 className="mb-3 line-clamp-2 text-xl font-semibold text-[#102725] transition-colors hover:text-primary">
           <Link href={`/blog/${post.slug}`}>
             {post.title}
           </Link>

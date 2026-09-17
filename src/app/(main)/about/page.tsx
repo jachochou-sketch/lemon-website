@@ -13,7 +13,6 @@ import {
 import Container from '@/components/ui/Container';
 import SectionTitle from '@/components/ui/SectionTitle';
 import Card from '@/components/ui/Card';
-import Badge from '@/components/ui/Badge';
 import { companyInfo } from '@/data/company';
 
 export const metadata: Metadata = {
@@ -56,14 +55,14 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-primary py-20 md:py-28">
+      <section className="page-hero">
         <Container>
           <div className="max-w-3xl">
-            <Badge variant="accent" className="mb-4">About Us</Badge>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              {companyInfo.tagline}
+            <p className="eyebrow">About Lemon</p>
+            <h1 className="mt-5 text-4xl font-semibold text-[#102725] md:text-6xl">
+              A water purification manufacturer built around product development
             </h1>
-            <p className="text-lg text-white/70 leading-relaxed max-w-2xl">
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
               Founded in {companyInfo.founded}, we have grown from a small workshop into
               a water purification manufacturing partner serving brands and distributors
               in more than 10 countries.
@@ -73,14 +72,14 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="relative -mt-10 pb-16">
+      <section className="border-b border-slate-900/10 bg-white py-10">
         <Container>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 gap-px border border-slate-900/10 bg-slate-900/10 lg:grid-cols-4">
             {stats.map((stat) => (
               <Card key={stat.label} padding="lg" className="text-center">
-                <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
-                <div className="text-2xl font-bold text-slate-900">{stat.value}</div>
-                <div className="text-sm text-slate-500 mt-1">{stat.label}</div>
+                <stat.icon className="mx-auto mb-3 h-6 w-6 text-primary" />
+                <div className="text-2xl font-semibold text-[#102725]">{stat.value}</div>
+                <div className="mt-1 text-[11px] uppercase tracking-[0.12em] text-slate-500">{stat.label}</div>
               </Card>
             ))}
           </div>
