@@ -4,7 +4,7 @@ import Button from '@/components/ui/Button';
 
 export default function CTASection() {
   return (
-    <section className="relative overflow-hidden bg-primary py-16 md:py-20">
+    <section className="water-cta relative overflow-hidden py-16 md:py-20">
       <div className="water-lines !opacity-20" aria-hidden="true" />
       <Container className="relative z-10">
         <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">

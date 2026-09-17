@@ -46,7 +46,8 @@
     @apply relative overflow-hidden border-b border-slate-900/10 py-14 md:py-20;
     background:
       radial-gradient(circle at 88% 5%, rgba(100, 180, 205, 0.20), transparent 27%),
-      linear-gradient(115deg, #eef3ec 0%, #eef6f7 100%);
+      linear-gradient(115deg, rgba(238, 243, 236, 0.94) 0%, rgba(238, 246, 247, 0.88) 100%),
+      url('/images/backgrounds/water-surface-texture.jpg') center / cover;
   }
 
   .page-hero::after {
@@ -66,7 +67,8 @@
     position: relative;
     background:
       radial-gradient(circle at 86% 18%, rgba(71, 158, 187, 0.16), transparent 24%),
-      linear-gradient(135deg, #f4f8f5 0%, #edf7f9 100%);
+      linear-gradient(135deg, rgba(244, 248, 245, 0.94) 0%, rgba(237, 247, 249, 0.88) 100%),
+      url('/images/backgrounds/water-surface-texture.jpg') center / cover;
   }
 
   .water-lines {
@@ -88,6 +90,12 @@
 
   .section-aqua {
     background-color: #eef6f7;
+  }
+
+  .water-cta {
+    background:
+      linear-gradient(110deg, rgba(11, 45, 43, 0.94), rgba(18, 63, 60, 0.82)),
+      url('/images/backgrounds/water-surface-texture.jpg') center / cover;
   }
 
   .prose-custom {

@@ -51,6 +51,37 @@ const values = [
   },
 ];
 
+const capabilityScenes = [
+  {
+    image: '/images/about/quality-laboratory.jpg',
+    eyebrow: '01 · Quality control',
+    title: 'Physical and chemical laboratory',
+    description:
+      'A dedicated laboratory supports material checks and water-quality evaluation during product development.',
+  },
+  {
+    image: '/images/about/environmental-testing.jpg',
+    eyebrow: '02 · Reliability testing',
+    title: 'Environmental test chamber',
+    description:
+      'Controlled temperature and humidity testing helps evaluate components and finished products under defined conditions.',
+  },
+  {
+    image: '/images/about/production-workshop.jpg',
+    eyebrow: '03 · Membrane production',
+    title: 'Ultrafiltration workshop',
+    description:
+      'Dedicated production areas support ultrafiltration membrane preparation and controlled manufacturing processes.',
+  },
+  {
+    image: '/images/about/final-assembly.jpg',
+    eyebrow: '04 · Manufacturing',
+    title: 'Finished product assembly',
+    description:
+      'Organized assembly lines and inspection checkpoints carry products through final assembly and packing.',
+  },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -112,6 +143,49 @@ export default function AboutPage() {
                 <p key={i}>{para}</p>
               ))}
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Engineering and production */}
+      <section className="section-padding section-rule bg-white">
+        <Container>
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+            <div>
+              <p className="eyebrow">Inside our operation</p>
+              <h2 className="mt-4 max-w-xl text-3xl font-semibold text-[#102725] md:text-5xl">
+                Engineering and production, documented
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-7 text-slate-600 lg:justify-self-end lg:text-lg lg:leading-8">
+              A look inside the laboratory, environmental testing, membrane production,
+              and final assembly areas behind our manufacturing programs.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:mt-16 lg:gap-x-12 lg:gap-y-16">
+            {capabilityScenes.map((scene) => (
+              <article key={scene.title}>
+                <div className="relative aspect-[3/2] overflow-hidden bg-[#edf6f7]">
+                  <Image
+                    src={scene.image}
+                    alt={scene.title}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out hover:scale-[1.025]"
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                  />
+                </div>
+                <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
+                  {scene.eyebrow}
+                </p>
+                <h3 className="mt-2 text-xl font-semibold text-[#102725] md:text-2xl">
+                  {scene.title}
+                </h3>
+                <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 md:text-base md:leading-7">
+                  {scene.description}
+                </p>
+              </article>
+            ))}
           </div>
         </Container>
       </section>
