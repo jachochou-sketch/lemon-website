@@ -17,7 +17,7 @@ export default function FeaturedProducts() {
           align="left"
         />
 
-        <div className="reveal-on-scroll mt-12 grid gap-px border border-slate-900/10 bg-slate-900/10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {featuredProducts.map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}

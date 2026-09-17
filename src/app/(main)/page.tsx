@@ -1,4 +1,5 @@
 import HeroSection from '@/components/home/HeroSection';
+import PartnershipPaths from '@/components/home/PartnershipPaths';
 import AboutPreview from '@/components/home/AboutPreview';
 import FeaturedProducts from '@/components/home/FeaturedProducts';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
@@ -8,9 +9,10 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
+      <PartnershipPaths />
       <FeaturedProducts />
-      <AboutPreview />
       <WhyChooseUs />
+      <AboutPreview />
       <CTASection />
     </>
   );

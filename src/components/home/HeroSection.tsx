@@ -15,10 +15,10 @@ export default function HeroSection() {
     <section className="water-surface border-b border-slate-900/10">
       <div className="water-lines" aria-hidden="true" />
       <Container>
-        <div className="relative z-10 grid min-h-[720px] items-stretch lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="flex flex-col justify-center border-slate-900/10 py-16 lg:border-r lg:py-24 lg:pr-10">
+        <div className="relative z-10 grid items-center gap-10 py-14 lg:min-h-[640px] lg:grid-cols-[0.9fr_1.1fr] lg:gap-16 lg:py-16">
+          <div className="flex flex-col justify-center lg:py-10">
             <p className="eyebrow enter-up">Zhongshan, China · Water purification manufacturing</p>
-            <h1 className="enter-up delay-1 mt-7 max-w-3xl text-[2.75rem] font-semibold leading-[0.98] text-[#102725] sm:text-[3.5rem] lg:text-[3.15rem] xl:text-[3.3rem]">
+            <h1 className="enter-up delay-1 mt-7 max-w-3xl text-[2.75rem] font-semibold leading-[1.02] text-[#102725] sm:text-[3.5rem] lg:text-[3.35rem] xl:text-[3.65rem]">
               <span className="block">Built for your market.</span>
               <span className="mt-2 block">Manufactured to your specification.</span>
             </h1>
@@ -47,8 +47,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="enter-fade delay-2 flex flex-col bg-[#e4f1f3]/80 lg:pl-14">
-            <div className="relative min-h-[430px] flex-1 overflow-hidden lg:min-h-0">
+          <div className="enter-fade delay-2 relative">
+            <div className="relative aspect-[4/3] overflow-hidden border border-slate-900/10 bg-[#e4f1f3] shadow-[0_24px_70px_rgba(31,91,86,0.10)]">
               <Image
                 src="/images/products/odm-water-purifier-bom.jpg"
                 alt="Exploded view of a Lemon custom water purification system"
@@ -58,18 +58,23 @@ export default function HeroSection() {
                 className="object-cover"
               />
             </div>
-            <div className="grid grid-cols-2 border-t border-slate-900/10 bg-[#edf6f6] sm:grid-cols-4">
-              {proofPoints.map(([value, label], index) => (
-                <div
-                  key={label}
-                  className={`px-4 py-5 text-center sm:text-left ${index % 2 === 1 ? 'border-l border-slate-900/10' : ''} ${index >= 2 ? 'border-t border-slate-900/10 sm:border-t-0' : ''} ${index > 0 ? 'sm:border-l sm:border-slate-900/10' : ''}`}
-                >
-                  <div className="text-lg font-semibold text-[#102725]">{value}</div>
-                  <div className="mt-1 text-[11px] uppercase tracking-[0.12em] text-slate-500">{label}</div>
-                </div>
-              ))}
+            <div className="absolute bottom-0 left-0 border-r border-t border-slate-900/10 bg-white/95 px-5 py-4 backdrop-blur-sm">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent-dark">OEM / ODM engineering</p>
+              <p className="mt-1 text-sm font-medium text-[#102725]">From component architecture to production</p>
             </div>
           </div>
+        </div>
+
+        <div className="relative z-10 grid grid-cols-2 border-t border-slate-900/10 sm:grid-cols-4">
+          {proofPoints.map(([value, label], index) => (
+            <div
+              key={label}
+              className={`py-6 text-center sm:text-left sm:pl-6 ${index % 2 === 1 ? 'border-l border-slate-900/10' : ''} ${index >= 2 ? 'border-t border-slate-900/10 sm:border-t-0' : ''} ${index > 0 ? 'sm:border-l sm:border-slate-900/10' : ''}`}
+            >
+              <div className="text-xl font-semibold text-[#102725]">{value}</div>
+              <div className="mt-1 text-[10px] uppercase tracking-[0.14em] text-slate-500">{label}</div>
+            </div>
+          ))}
         </div>
       </Container>
     </section>

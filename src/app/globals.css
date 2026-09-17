@@ -87,9 +87,7 @@
   }
 
   .section-aqua {
-    background:
-      linear-gradient(rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.74)),
-      linear-gradient(120deg, #dff1f4 0%, #eef5ef 100%);
+    background-color: #eef6f7;
   }
 
   .prose-custom {

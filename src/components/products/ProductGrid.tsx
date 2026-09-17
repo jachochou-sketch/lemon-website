@@ -37,7 +37,7 @@ export default function ProductGrid({
   }
 
   return (
-    <div className="reveal-on-scroll grid gap-px border border-slate-900/10 bg-slate-900/10 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
       {products.map((product) => (
         <ProductCard key={product.slug} product={product} />
       ))}

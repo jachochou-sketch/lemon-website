@@ -12,7 +12,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const serviceOptions = product.serviceOptions ?? ['OEM', 'ODM'];
 
   return (
-    <Card hover padding="none" className="group flex flex-col overflow-hidden">
+    <Card hover padding="none" className="group flex h-full flex-col overflow-hidden">
       {/* Image */}
       <div className="relative aspect-[4/3] flex items-center justify-center overflow-hidden bg-[#eef2ef]">
         {product.imageAvailable && product.images[0] ? (
@@ -29,7 +29,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       </div>
 
       {/* Content */}
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-6 lg:p-7">
         <div className="mb-4 flex items-center justify-between gap-3">
           <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">{product.category}</span>
           <span className="text-[10px] font-medium tracking-[0.12em] text-slate-400">{serviceOptions.join(' / ')}</span>
