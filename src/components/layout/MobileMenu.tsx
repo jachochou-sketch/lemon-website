@@ -63,14 +63,16 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
       {/* Slide-in panel */}
       <div
         className={cn(
-          'fixed top-0 right-0 h-full w-[86%] max-w-sm bg-[#f7f8f4] z-50 border-l border-slate-900/10 transition-transform duration-300 ease-in-out xl:hidden',
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+          'fixed top-0 right-0 flex h-full w-[86%] max-w-sm flex-col bg-[#f7f8f4] z-50 border-l border-slate-900/10 transition-transform duration-300 ease-in-out xl:hidden',
+          isOpen ? 'translate-x-0' : 'translate-x-full pointer-events-none'
         )}
+        id="mobile-navigation"
         role="dialog"
         aria-modal="true"
+        aria-hidden={!isOpen}
         aria-label="Mobile navigation"
       >
-        <div className="flex items-center justify-between p-5 border-b border-slate-900/10">
+        <div className="flex shrink-0 items-center justify-between p-5 border-b border-slate-900/10">
           <Link href="/" className="flex items-center gap-3" aria-label="Lemon Environmental Technology home">
             <Image
               src="/images/brand/lemon-logo-concept-v2-transparent.png"
@@ -90,7 +92,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
           </button>
         </div>
 
-        <nav className="flex flex-col px-5 py-8">
+        <nav className="flex min-h-0 flex-1 flex-col overflow-y-auto px-5 py-5">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -107,7 +109,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
           ))}
         </nav>
 
-        <div className="absolute bottom-0 left-0 right-0 p-5 border-t border-slate-900/10">
+        <div className="shrink-0 p-5 border-t border-slate-900/10">
           <Button href="/contact" variant="primary" className="w-full">
             Discuss a Project
             <ArrowUpRight className="h-4 w-4" />

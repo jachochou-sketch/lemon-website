@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -14,6 +14,7 @@ import MobileMenu from '@/components/layout/MobileMenu';
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const closeMobileMenu = useCallback(() => setIsMobileMenuOpen(false), []);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -85,6 +86,8 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(true)}
                 className="border border-slate-900/15 p-2.5 transition-colors hover:border-primary xl:hidden"
                 aria-label="Open menu"
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-navigation"
               >
                 <Menu className="w-5 h-5 text-slate-700" />
               </button>
@@ -98,7 +101,7 @@ export default function Header() {
 
       <MobileMenu
         isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
+        onClose={closeMobileMenu}
         navLinks={navLinks}
       />
     </>
