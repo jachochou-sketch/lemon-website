@@ -16,31 +16,36 @@ export default function HeroSection() {
     <section className="water-surface border-b border-slate-900/10">
       <div className="water-lines" aria-hidden="true" />
       <Container>
-        <div className="relative z-10 grid items-center gap-12 py-10 sm:py-14 lg:grid-cols-2 lg:gap-14 lg:py-16 xl:gap-20">
-          <div className="min-w-0 lg:py-6">
+        <div className="relative z-10 grid items-center gap-12 py-10 sm:py-14 lg:grid-cols-2 lg:gap-16 lg:py-20 xl:gap-24">
+          <div className="min-w-0 lg:py-8">
             <p className="eyebrow enter-up leading-5">Lemon Environmental · Since 2012</p>
-            <h1 className="enter-up delay-1 mt-6 max-w-xl text-[2.5rem] font-semibold leading-[1.08] text-[#102725] sm:text-[3.25rem] lg:text-[2.8rem] xl:text-[3.15rem]">
-              <span className="block">Built for your market.</span>
-              <span className="mt-3 block text-primary-light">Made to your specification.</span>
+            <h1 className="enter-up delay-1 mt-6 max-w-xl text-[2.5rem] font-semibold leading-[1.08] text-[#123f3c] sm:text-[3.25rem] lg:text-[2.9rem] xl:text-[3.25rem]">
+              <span className="block">Water purification,</span>
+              <span className="mt-3 block text-[#607d2b]">built for your brand.</span>
             </h1>
             <p className="enter-up delay-2 mt-7 max-w-xl text-base leading-7 text-slate-600 md:text-lg">
-              Lemon develops and manufactures RO and UF systems for residential,
-              commercial, and private-label programs in international markets.
+              Lemon develops and manufactures RO and UF water purifiers for residential,
+              whole-house, and commercial use — supplied as proven platforms, private-label
+              OEM programs, or fully custom ODM development.
             </p>
 
-            <div className="enter-up delay-3 mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+            <div className="enter-up delay-3 mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
               <Button href="/products" variant="secondary" size="md">
-                View product range
+                Explore product range
                 <ArrowRight className="h-4 w-4" />
               </Button>
-              <Button href="/contact" variant="outline" size="md">
-                Discuss OEM / ODM
+              <Button href="/oem-odm" variant="outline" size="md">
+                Start an OEM / ODM brief
               </Button>
             </div>
 
-            <div className="enter-up delay-4 mt-8 border-t border-slate-900/10 pt-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">From development to production</p>
-              <p className="mt-2 text-sm leading-6 text-slate-600">RO &amp; UF systems · Private label · OEM / ODM</p>
+            <div className="enter-up delay-4 mt-9 border-t border-slate-900/10 pt-5">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#123f3c]">
+                From development to production
+              </p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                RO &amp; UF systems · Private label · OEM / ODM
+              </p>
             </div>
           </div>
 
@@ -50,7 +55,7 @@ export default function HeroSection() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View enterprise qualifications image at full size (opens in a new tab)"
-              className="qualification-image block overflow-hidden rounded-lg bg-white ring-1 ring-slate-900/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              className="qualification-image block overflow-hidden rounded-lg bg-white ring-1 ring-slate-900/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#123f3c]"
             >
               <Image
                 src="/images/about/enterprise-qualifications.png"
@@ -64,10 +69,18 @@ export default function HeroSection() {
             </a>
             <figcaption className="flex flex-wrap items-center justify-between gap-3 px-1 pb-1 pt-4 sm:px-2 sm:pt-5">
               <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-primary">Enterprise qualifications</p>
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-[#123f3c]">
+                  Enterprise qualifications
+                </p>
                 <p className="mt-1 text-sm text-slate-600">Water purification design &amp; innovation</p>
               </div>
-              <a href="/images/about/enterprise-qualifications.png" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" aria-label="View full image (opens in a new tab)">
+              <a
+                href="/images/about/enterprise-qualifications.png"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-[#123f3c] underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#123f3c]"
+                aria-label="View full image (opens in a new tab)"
+              >
                 View full image <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </a>
             </figcaption>
@@ -78,9 +91,9 @@ export default function HeroSection() {
           {proofPoints.map(([value, label], index) => (
             <div
               key={label}
-              className={`py-6 text-center sm:text-left sm:pl-6 ${index % 2 === 1 ? 'border-l border-slate-900/10' : ''} ${index >= 2 ? 'border-t border-slate-900/10 sm:border-t-0' : ''} ${index > 0 ? 'sm:border-l sm:border-slate-900/10' : ''}`}
+              className={`py-6 text-center sm:text-left sm:pl-6 ${index >= 2 ? 'border-t border-slate-900/10 sm:border-t-0' : ''} ${index > 0 ? 'sm:border-l sm:border-slate-900/10' : ''}`}
             >
-              <div className="text-xl font-semibold text-[#102725]">{value}</div>
+              <div className="text-xl font-semibold text-[#123f3c]">{value}</div>
               <div className="mt-1 text-[10px] uppercase tracking-[0.14em] text-slate-500">{label}</div>
             </div>
           ))}

@@ -53,7 +53,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
       {/* Backdrop */}
       <div
         className={cn(
-          'fixed inset-0 bg-[#102725]/45 z-40 transition-opacity duration-300 lg:hidden',
+          'fixed inset-0 bg-[#102725]/45 z-40 transition-opacity duration-300 xl:hidden',
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
         onClick={onClose}
@@ -63,7 +63,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
       {/* Slide-in panel */}
       <div
         className={cn(
-          'fixed top-0 right-0 h-full w-[86%] max-w-sm bg-[#f7f8f4] z-50 border-l border-slate-900/10 transition-transform duration-300 ease-in-out lg:hidden',
+          'fixed top-0 right-0 h-full w-[86%] max-w-sm bg-[#f7f8f4] z-50 border-l border-slate-900/10 transition-transform duration-300 ease-in-out xl:hidden',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
         role="dialog"

@@ -53,7 +53,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-7">
+            <nav className="hidden xl:flex items-center gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
@@ -83,7 +83,7 @@ export default function Header() {
               </Button>
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="border border-slate-900/15 p-2.5 transition-colors hover:border-primary lg:hidden"
+                className="border border-slate-900/15 p-2.5 transition-colors hover:border-primary xl:hidden"
                 aria-label="Open menu"
               >
                 <Menu className="w-5 h-5 text-slate-700" />

@@ -154,6 +154,47 @@ export default function ContactPage() {
           </div>
         </Container>
       </section>
+
+      {/* What happens next */}
+      <section className="border-t border-slate-900/10 bg-white section-padding">
+        <Container>
+          <p className="eyebrow">What happens next</p>
+          <h2 className="mt-4 text-2xl font-semibold text-[#102725] md:text-3xl">
+            Three simple steps after you send an inquiry
+          </h2>
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            {[
+              {
+                step: '1',
+                title: 'Brief review',
+                body: 'We read your market, water conditions, format, and volume details, and come back with any questions needed to assess feasibility.',
+              },
+              {
+                step: '2',
+                title: 'Configuration discussion',
+                body: 'We align on a suitable platform or development path, covering configuration, branding, packaging, and documentation scope.',
+              },
+              {
+                step: '3',
+                title: 'Sample & quotation agreement',
+                body: 'Where appropriate, samples and a written quotation are agreed together before any production commitment is made.',
+              },
+            ].map((item) => (
+              <div key={item.step} className="border border-slate-900/10 bg-[#f7f8f4] p-6">
+                <span className="flex h-9 w-9 items-center justify-center border border-primary/30 bg-[#eef6f7] text-sm font-semibold text-primary">
+                  {item.step}
+                </span>
+                <h3 className="mt-4 text-base font-semibold text-[#102725]">{item.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-sm leading-6 text-slate-500">
+            We confirm timelines and commercial terms with you once the product
+            configuration, quantity, and project scope are defined.
+          </p>
+        </Container>
+      </section>
     </>
   );
 }

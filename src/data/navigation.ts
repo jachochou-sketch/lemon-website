@@ -3,6 +3,8 @@ import { NavLink } from '@/types';
 export const navLinks: NavLink[] = [
   { label: 'Home', href: '/' },
   { label: 'Products', href: '/products' },
+  { label: 'Applications', href: '/applications' },
+  { label: 'OEM / ODM', href: '/oem-odm' },
   { label: 'About Us', href: '/about' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
@@ -14,6 +16,8 @@ export const footerLinks = {
     { label: 'RO Systems', href: '/products?category=RO+Systems' },
     { label: 'UF Systems', href: '/products?category=UF+Systems' },
     { label: 'Components & Filters', href: '/products?category=Components' },
+    { label: 'Applications & Installations', href: '/applications' },
+    { label: 'OEM / ODM Programs', href: '/oem-odm' },
     { label: 'OEM & ODM Inquiries', href: '/contact' },
   ],
   company: [
