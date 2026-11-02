@@ -13,6 +13,7 @@ export const navLinks: NavLink[] = [
 export const footerLinks = {
   products: [
     { label: 'All Products', href: '/products' },
+    { label: 'Commercial Kitchen', href: '/commercial-kitchen' },
     { label: 'RO Systems', href: '/products?category=RO+Systems' },
     { label: 'UF Systems', href: '/products?category=UF+Systems' },
     { label: 'Components & Filters', href: '/products?category=Components' },

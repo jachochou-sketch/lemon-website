@@ -32,6 +32,7 @@ export default function ProductsPage() {
       <section className="border-b border-slate-900/10 bg-white section-padding">
         <Container>
           <p className="eyebrow">Choosing a starting point</p>
+          <a href="/commercial-kitchen" className="mt-4 inline-flex items-center gap-3 text-sm font-semibold text-primary underline underline-offset-4">New: explore the commercial kitchen series <span aria-hidden="true">↗</span></a>
           <div className="mt-6 grid gap-5 md:grid-cols-3">
             <div className="border border-slate-900/10 bg-[#f7f8f4] p-6">
               <h2 className="text-base font-semibold text-[#102725]">RO systems</h2>

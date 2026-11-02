@@ -34,8 +34,8 @@ export default function InquiryButton({
   };
 
   return (
-    <div className="rounded-xl border border-white/15 bg-white/5 p-4">
-      <div className="text-sm font-semibold text-white mb-3">
+    <div className="border border-primary/15 bg-white p-4">
+      <div className="text-sm font-semibold text-primary mb-3">
         Choose your cooperation option
       </div>
       <div className="grid grid-cols-2 gap-2 mb-3" role="group" aria-label="Cooperation option">
@@ -48,8 +48,8 @@ export default function InquiryButton({
             className={cn(
               'rounded-lg border px-4 py-3 text-left transition-all',
               selectedService === option
-                ? 'border-accent bg-accent text-white shadow-lg shadow-accent/20'
-                : 'border-white/20 bg-white/5 text-white hover:border-white/40 hover:bg-white/10'
+                ? 'border-primary bg-primary text-white'
+                : 'border-primary/20 bg-white text-primary hover:border-primary/50 hover:bg-primary/5'
             )}
           >
             <span className="block text-base font-bold">{option}</span>
@@ -59,7 +59,7 @@ export default function InquiryButton({
           </button>
         ))}
       </div>
-      <p className="text-xs leading-relaxed text-white/60 mb-4">
+      <p className="text-xs leading-relaxed text-slate-600 mb-4">
         {serviceDescriptions[selectedService]}
       </p>
       <Button onClick={handleClick} variant="primary" size="lg" className="w-full sm:w-auto">

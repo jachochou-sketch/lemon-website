@@ -1,5 +1,6 @@
 import { Product } from '@/types';
 import { catalogProducts } from '@/data/catalog-products';
+import { commercialKitchenProducts, commercialKitchenCategory } from '@/data/commercial-kitchen';
 
 const existingProducts: Product[] = [
   {
@@ -131,10 +132,11 @@ This matched quick-change cartridge set is designed for the LM-R3500 (Zhichun) 5
   },
 ];
 
-export const products: Product[] = [...catalogProducts, ...existingProducts];
+export const products: Product[] = [...catalogProducts, ...existingProducts, ...commercialKitchenProducts];
 
 export const productCategories = [
   'All Products',
+  commercialKitchenCategory,
   'ODM Services',
   'RO Systems',
   'UF Systems',

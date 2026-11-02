@@ -6,6 +6,7 @@ import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ProcurementFAQ from '@/components/home/ProcurementFAQ';
 import CTASection from '@/components/home/CTASection';
 import { MembraneExpertise } from '@/components/home/ProfileCapabilities';
+import CommercialKitchenPreview from '@/components/home/CommercialKitchenPreview';
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <HeroSection />
       <BrandProof />
       <ProductDirections />
+      <CommercialKitchenPreview />
       <FeaturedProducts />
       <OEMSpotlight />
       <MembraneExpertise />
