@@ -1,6 +1,5 @@
 import HeroSection from '@/components/home/HeroSection';
-import PartnershipPaths from '@/components/home/PartnershipPaths';
-import AboutPreview from '@/components/home/AboutPreview';
+import { BrandProof, ProductDirections, OEMSpotlight, QualificationProof } from '@/components/home/CommercialSections';
 import FeaturedProducts from '@/components/home/FeaturedProducts';
 import ManufacturingPreview from '@/components/home/ManufacturingPreview';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
@@ -11,12 +10,14 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <PartnershipPaths />
+      <BrandProof />
+      <ProductDirections />
       <FeaturedProducts />
+      <OEMSpotlight />
       <ManufacturingPreview />
+      <QualificationProof />
       <WhyChooseUs />
       <ProcurementFAQ />
-      <AboutPreview />
       <CTASection />
     </>
   );

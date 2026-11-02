@@ -39,11 +39,11 @@ const applications = [
 
 export default function FeaturedProducts() {
   return (
-    <section id="featured-products" className="section-aqua section-padding">
+    <section className="bg-white py-16 md:py-24">
       <Container>
         <SectionTitle
-          title="Systems proven in real installations"
-          subtitle="Three application previews — kitchen, whole-house, and commercial — connect our product platforms to the environments they were built for."
+          title="Made for real places."
+          subtitle="From the kitchen tap to shared commercial spaces. Explore installation examples and find a configuration for your application."
           align="left"
         />
 
@@ -51,7 +51,7 @@ export default function FeaturedProducts() {
           {applications.map((item) => (
             <article
               key={item.key}
-              className="flex min-w-0 flex-col overflow-hidden rounded-xl bg-white ring-1 ring-slate-900/5"
+              className="commercial-case flex min-w-0 flex-col overflow-hidden border-t border-primary/20 bg-white"
             >
               <div className="bg-white p-4">
                 <Image

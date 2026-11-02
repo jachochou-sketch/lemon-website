@@ -30,6 +30,19 @@
 }
 
 @layer components {
+  .commercial-hero {
+    background: linear-gradient(110deg, rgba(6, 41, 40, .98), rgba(9, 57, 57, .88)), url('/images/backgrounds/water-surface-texture.jpg') center / cover;
+    color: white;
+  }
+
+  .commercial-button {
+    @apply inline-flex min-h-[48px] items-center justify-center gap-4 px-6 py-3.5 text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#7fa33c];
+  }
+
+  .commercial-text-link {
+    @apply inline-flex items-center gap-3 self-start text-sm font-semibold text-primary underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary;
+  }
+
   .section-padding {
     @apply py-16 md:py-20 lg:py-28;
   }
@@ -128,6 +141,17 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .commercial-case {
+    transition: transform 400ms ease, border-color 400ms ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .commercial-case:hover {
+      transform: translateY(-4px);
+      border-color: #123f3c;
+    }
+  }
+
   @keyframes qualification-arrive {
     from {
       opacity: 0;
