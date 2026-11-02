@@ -24,7 +24,7 @@ const facilities = [
     src: '/images/about/production-workshop.jpg',
     alt: 'Production workshop with the ultrafiltration module assembly line',
     title: 'UF production area',
-    description: 'Assembly of ultrafiltration modules and housings on the line.',
+    description: 'PVDF ultrafiltration membrane-fibre production and preparation.',
   },
   {
     key: 'assembly',
@@ -35,13 +35,13 @@ const facilities = [
   },
 ];
 
-export default function ManufacturingPreview() {
+export default function ManufacturingPreview({ showCompanyLink = true }: { showCompanyLink?: boolean }) {
   return (
     <section className="section-padding bg-white">
       <Container>
         <SectionTitle
           title="From development to the production floor"
-          subtitle="A look inside the facility behind Lemon programs — lab, test rooms, and lines where your units are built."
+          subtitle="Physical and chemical analysis, membrane production, environmental testing, and assembly support the path from filtration material to finished equipment."
           align="left"
         />
 
@@ -66,12 +66,16 @@ export default function ManufacturingPreview() {
           ))}
         </div>
 
-        <div className="mt-10">
+        <div className="mt-8 border-t border-slate-900/10 pt-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">Further testing capabilities</p>
+          <p className="mt-3 text-sm leading-7 text-slate-600">Water-hammer testing · Finished-unit performance testing · Quality laboratory</p>
+        </div>
+        {showCompanyLink && <div className="mt-7">
           <Button href="/about" variant="outline" size="lg">
             More about the facility
             <ArrowRight className="h-4 w-4" />
           </Button>
-        </div>
+        </div>}
       </Container>
     </section>
   );

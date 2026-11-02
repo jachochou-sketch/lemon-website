@@ -3,7 +3,7 @@ import { ArrowRight, Shield, Factory, Globe, Users } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Button from '@/components/ui/Button';
 import SectionTitle from '@/components/ui/SectionTitle';
-import { companyInfo } from '@/data/company';
+import { companyInfo, companyEvidence } from '@/data/company';
 
 const highlights = [
   {
@@ -13,18 +13,18 @@ const highlights = [
   },
   {
     icon: Users,
-    label: 'Employees',
-    value: companyInfo.employees,
+    label: 'Patent Portfolio',
+    value: companyEvidence.patentPortfolio,
   },
   {
     icon: Shield,
-    label: 'Certified',
-    value: 'ISO 9001, CE',
+    label: 'Founded',
+    value: String(companyInfo.founded),
   },
   {
     icon: Globe,
-    label: 'Markets',
-    value: '10+ Countries',
+    label: 'Locations',
+    value: 'Zhongshan · Chuzhou · Shunde',
   },
 ];
 

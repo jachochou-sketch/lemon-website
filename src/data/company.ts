@@ -1,77 +1,32 @@
 import { CompanyInfo } from '@/types';
 
+// Company history and capabilities checked against introduce.pdf, spreads 3-4.
+// Contact details retain the owner's explicit website instructions.
 export const companyInfo: CompanyInfo = {
-  name: 'Lemon Environmental Technology Co., Ltd.',
+  name: 'Lemon Environmental Technology (Guangdong) Co., Ltd.',
   shortName: 'Lemon',
-  tagline: 'Water Purifier ODM & OEM Manufacturing in Zhongshan',
-  description: `Lemon Environmental Technology Co., Ltd. (柠檬环境科技有限公司) develops and manufactures
-water purification products for brands, distributors, and project partners. Our work covers existing-product
-OEM programs and ODM development for residential and commercial applications.
+  tagline: 'RO and PVDF Ultrafiltration Development & Manufacturing',
+  description: `Established in 2012, Lemon Environmental Technology develops and manufactures water treatment products under the limOne brand. Its work spans residential RO drinking-water systems, PVDF ultrafiltration membranes, stainless-steel whole-house purification systems, and commercial drinking-water equipment.
 
-Our 10,000 m² ISO-certified facility houses advanced RO membrane production lines, filter assembly
-workshops, injection molding for housings, and a dedicated water quality testing laboratory.
-Our project scope can cover product design, mold development, and prototyping
-to mass production, packaging design, and international logistics.
+The manufacturing and development network includes the household water purification base in Zhongshan, the commercial water purification manufacturing base in Chuzhou, Anhui, and the research and brand operation centre in Beijiao, Shunde.
 
-We serve brands across 10+ countries, providing customized RO systems, UF purifiers, UV sterilizers,
-water softeners, and replacement filter cartridges. Inspection and documentation are agreed according
-to the product specification and the requirements of each target market.`,
-
+Product development is supported by physical and chemical analysis, quality testing, temperature and humidity testing, water-hammer testing, membrane-fibre production, finished-unit performance testing, and final assembly.`,
   founded: 2012,
-  employees: '100+',
-  factorySize: '10,000 m²',
-  annualRevenue: '$15M+',
-  markets: [
-    'North America',
-    'European Union',
-    'Southeast Asia',
-    'Middle East',
-    'South America',
-    'Africa',
-    'South Asia',
-  ],
-
-  certifications: [
-    { name: 'ISO 9001:2015', issuer: 'SGS', year: 2018 },
-    { name: 'CE Marking', issuer: 'TÜV Rheinland', year: 2019 },
-  ],
-
+  employees: '',
+  factorySize: '10,000+ m²',
+  annualRevenue: '',
+  markets: [],
+  certifications: [],
   milestones: [
-    { year: 2012, title: 'Company Founded', description: 'Established in Zhongshan, Guangdong with focus on RO membrane and filter R&D.' },
-    { year: 2017, title: 'Factory Expansion', description: 'Moved to current 10,000 m² facility in Caixun Technology Park, Zhongshan.' },
-    { year: 2018, title: 'ISO 9001 Certified', description: 'Achieved ISO 9001:2015 certification for quality management systems.' },
-    { year: 2022, title: 'Smart Purifier Launch', description: 'Launched IoT-enabled smart water purifier series with mobile app integration.' },
-    { year: 2024, title: 'Production Expansion', description: 'Added automated RO membrane production line, doubling annual output capacity.' },
-    { year: 2025, title: 'Global Reach', description: 'Products now sold in 10+ countries through brand partnerships and ODM/OEM programs.' },
+    { year: 2012, title: 'Established in Zhongshan', description: 'Company established with a focus on water purification research, development, production, and sales.' },
+    { year: 2013, title: 'Ultrafiltration range launched', description: 'The limOne ultrafiltration product series entered the market.' },
+    { year: 2014, title: 'Household RO development', description: 'Expansion into under-sink household reverse-osmosis systems.' },
+    { year: 2016, title: 'High-tech enterprise recognition', description: 'The development history records recognition as a high-tech enterprise.' },
+    { year: 2019, title: 'Commercial water purification', description: 'A dedicated commercial water purification project was established.' },
+    { year: 2020, title: 'Development and manufacturing network', description: 'Research and brand operations in Beijiao, Shunde, and commercial equipment manufacturing in Chuzhou, Anhui, were developed.' },
+    { year: 2024, title: 'Zhongshan relocation', description: 'The Huoju factory relocated to Caixun Science and Technology Park in Zhongshan.' },
   ],
-
-  teamMembers: [
-    {
-      name: 'Michael Zhang',
-      role: 'CEO & Founder',
-      image: '/images/team/ceo.jpg',
-      bio: '18 years in water treatment industry. Former R&D Director at a leading membrane manufacturer.',
-    },
-    {
-      name: 'Dr. Lisa Chen',
-      role: 'Chief Technology Officer',
-      image: '/images/team/cto.jpg',
-      bio: 'PhD in Environmental Engineering. Holds 8 patents in RO membrane and filtration technology.',
-    },
-    {
-      name: 'Robert Wu',
-      role: 'VP of International Sales',
-      image: '/images/team/vp-sales.jpg',
-      bio: '15 years of B2B sales experience. Manages partnerships with 50+ brands across 40 countries.',
-    },
-    {
-      name: 'Anna Liu',
-      role: 'Quality Director',
-      image: '/images/team/quality-director.jpg',
-      bio: 'Certified ISO 9001 Lead Auditor. Former quality manager at NSF-certified laboratory.',
-    },
-  ],
-
+  teamMembers: [],
   contact: {
     address: 'Building 2-3, Caixun Technology Park, Minzhong Street, Zhongshan City, Guangdong 528441, China',
     phone: '+86 13250496024',
@@ -79,4 +34,13 @@ to the product specification and the requirements of each target market.`,
     linkedin: 'https://www.linkedin.com/in/jacho-chou-204ba3386/',
     workingHours: 'Mon - Fri, 8:30 AM - 5:30 PM (CST / UTC+8)',
   },
+};
+
+export const companyEvidence = {
+  patentPortfolio: '100+',
+  locations: [
+    { name: 'Zhongshan', area: '10,000+ m²', role: 'Household water purification', detail: 'Research and manufacturing at Caixun Science and Technology Park.' },
+    { name: 'Chuzhou, Anhui', area: '28,000+ m²', role: 'Commercial equipment manufacturing', detail: 'Water purification smart-manufacturing industrial park.' },
+    { name: 'Beijiao, Shunde', area: '1,000+ m²', role: 'Research & brand operations', detail: 'A centre supporting product research, development, and brand operations.' },
+  ],
 };

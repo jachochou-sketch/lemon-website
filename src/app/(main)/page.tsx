@@ -5,6 +5,7 @@ import ManufacturingPreview from '@/components/home/ManufacturingPreview';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ProcurementFAQ from '@/components/home/ProcurementFAQ';
 import CTASection from '@/components/home/CTASection';
+import { MembraneExpertise } from '@/components/home/ProfileCapabilities';
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <ProductDirections />
       <FeaturedProducts />
       <OEMSpotlight />
+      <MembraneExpertise />
       <ManufacturingPreview />
       <QualificationProof />
       <WhyChooseUs />

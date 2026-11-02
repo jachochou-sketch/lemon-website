@@ -12,7 +12,7 @@ export default function HeroSection() {
             <p className="enter-up flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-cyan-100"><span className="h-px w-8 bg-lime-300" />Lemon Environmental · Since 2012</p>
             <h1 className="enter-up delay-1 mt-7 text-[3.5rem] font-semibold leading-[0.98] tracking-[-0.055em] text-white sm:text-[5rem] lg:text-[5.6rem]">Pure water.<br /><span className="text-[#c3e889]">Your brand.</span></h1>
             <p className="enter-up delay-2 mt-7 max-w-lg text-lg leading-8 text-slate-200">Water purification systems, developed and manufactured for the market you serve.</p>
-            <p className="enter-up delay-2 mt-4 max-w-lg text-sm leading-7 text-slate-300">RO and UF platforms. Private-label production. Custom product development. One manufacturing partner in Zhongshan, China.</p>
+            <p className="enter-up delay-2 mt-4 max-w-lg text-sm leading-7 text-slate-300">RO drinking-water systems. PVDF ultrafiltration expertise. Residential and commercial product development, supported by our manufacturing network in China.</p>
             <div className="enter-up delay-3 mt-9 flex flex-col gap-4 sm:flex-row">
               <Link href="/products" className="commercial-button bg-[#c3e889] text-[#103c38] hover:bg-white">Explore the range <ArrowRight className="h-4 w-4" /></Link>
               <Link href="/contact" className="commercial-button border border-white/40 text-white hover:bg-white/10">Discuss your project <ArrowRight className="h-4 w-4" /></Link>

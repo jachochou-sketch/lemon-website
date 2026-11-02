@@ -17,40 +17,40 @@ closely with you to create a product that stands out in your market.
 
 - **Custom Industrial Design**: Unique housing designs that differentiate your brand
 - **Tailored Filtration**: RO, UF, UV, alkaline, mineral — configure stages for your water conditions
-- **Smart Features**: IoT connectivity, TDS monitoring, filter life tracking, app integration
-- **Certification Support**: CE, ISO 9001, and target-market compliance assistance
+- **Controls and Interfaces**: Discuss display, filter-life reminders, and controls for the agreed platform
+- **Documentation Review**: Confirm product-specific documents for your destination market
 - **Packaging Design**: Retail-ready packaging with your branding and language
 
 ### Our ODM Process
 
 1. **Consultation** — Share your requirements, target market, and budget
 2. **Design** — Our engineers create 3D renders and technical specifications
-3. **Prototype** — We build functional prototypes for your evaluation (3-4 weeks)
-4. **Refinement** — Iterate based on your feedback until perfect
-5. **Production** — Mass production with 100% QC inspection
-6. **Delivery** — FOB or DDP shipping to your destination
+3. **Samples** — Agree the sample scope and schedule for evaluation
+4. **Refinement** — Review samples against the agreed specification
+5. **Production** — Confirm the manufacturing and inspection plan
+6. **Delivery** — Agree packaging, shipping terms, and destination requirements
 
 ### Why Choose Lemon for ODM?
 
-- 14+ years of water purification R&D expertise
-- 15+ in-house engineers for rapid design iterations
-- Flexible MOQ starting from 300 units
-- 10,000 m² facility with advanced production lines
-- End-to-end support from concept to container`,
+- Water purification development since 2012
+- RO systems and PVDF ultrafiltration membrane expertise
+- Household and commercial equipment development
+- Laboratory, environmental, water-hammer, and finished-unit testing capabilities
+- Project-specific scope, quantities, and delivery planning`,
     images: ['/images/products/odm-water-purifier-bom.jpg'],
     imageAvailable: true,
     specifications: [
       { label: 'Service Type', value: 'Full ODM (Design → Manufacturing → Packaging)' },
-      { label: 'Customization Scope', value: 'ID design, filtration stages, smart features, branding' },
-      { label: 'Prototype Timeline', value: '3-4 weeks' },
-      { label: 'MOQ', value: '300 units (flexible for new brands)' },
-      { label: 'Certification Support', value: 'CE, ISO 9001, RoHS, NSF guidance' },
-      { label: 'Delivery', value: 'FOB / DDP worldwide' },
+      { label: 'Customization Scope', value: 'Housing, filtration configuration, controls, branding, packaging' },
+      { label: 'Sample Schedule', value: 'Agreed after scope review' },
+      { label: 'MOQ', value: 'Confirmed for the selected configuration' },
+      { label: 'Documentation', value: 'Reviewed per model and destination market' },
+      { label: 'Delivery', value: 'Terms and schedule agreed per project' },
     ],
-    certifications: ['ISO 9001:2015', 'CE', 'RoHS'],
-    minOrder: '300 units (flexible)',
+    certifications: [],
+    minOrder: 'Confirm with sales',
     supplyAbility: 'Custom project-based',
-    deliveryTime: '45-60 days',
+    deliveryTime: 'Agreed per project',
     featured: true,
   },
   {

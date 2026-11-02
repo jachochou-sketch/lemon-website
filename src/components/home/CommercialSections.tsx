@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight, Check } from 'lucide-react';
 import Container from '@/components/ui/Container';
 
 export function BrandProof() {
-  return <section className="border-b border-slate-900/10 bg-white"><Container><div className="grid grid-cols-2 gap-y-6 py-8 md:grid-cols-4 md:py-10">{[['2012','Established in Zhongshan'],['10,000 m²','Manufacturing facility'],['100+','Production team'],['10+','Export markets']].map(([value,label])=><div key={label} className="border-l border-primary/15 px-5 first:border-0"><p className="text-2xl font-semibold tracking-tight text-primary md:text-3xl">{value}</p><p className="mt-2 text-xs leading-5 text-slate-500">{label}</p></div>)}</div></Container></section>;
+  return <section className="border-b border-slate-900/10 bg-white"><Container><div className="grid grid-cols-2 gap-y-6 py-8 md:grid-cols-4 md:py-10">{[['2012','Established in Zhongshan'],['10,000+ m²','Zhongshan manufacturing base'],['28,000+ m²','Chuzhou industrial park'],['100+','Invention & utility-model patents']].map(([value,label])=><div key={label} className="border-l border-primary/15 px-5 first:border-0"><p className="text-2xl font-semibold tracking-tight text-primary md:text-3xl">{value}</p><p className="mt-2 text-xs leading-5 text-slate-500">{label}</p></div>)}</div></Container></section>;
 }
 
 const platforms = [
